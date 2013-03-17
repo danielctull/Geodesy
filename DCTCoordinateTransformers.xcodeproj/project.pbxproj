@@ -14,6 +14,10 @@
 		24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1E16F5DB1E00479DDD /* UIKit.framework */; };
 		24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
 		24948A2616F5DB1E00479DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24948A2416F5DB1E00479DDD /* InfoPlist.strings */; };
+		24948A3016F5DC0100479DDD /* DCTOSGB36Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A2F16F5DC0100479DDD /* DCTOSGB36Coordinate.m */; };
+		24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */; };
+		24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */; };
+		24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* DCTCoordinate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +43,14 @@
 		24948A1E16F5DB1E00479DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTCoordinateTransformersTests-Info.plist"; sourceTree = "<group>"; };
 		24948A2516F5DB1E00479DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24948A2E16F5DC0100479DDD /* DCTOSGB36Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGB36Coordinate.h; sourceTree = "<group>"; };
+		24948A2F16F5DC0100479DDD /* DCTOSGB36Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36Coordinate.m; sourceTree = "<group>"; };
+		24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinate.h; sourceTree = "<group>"; };
+		24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinate.m; sourceTree = "<group>"; };
+		24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84Coordinate.h; sourceTree = "<group>"; };
+		24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84Coordinate.m; sourceTree = "<group>"; };
+		24948A3716F5DC7700479DDD /* DCTCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTCoordinate.h; sourceTree = "<group>"; };
+		24948A3816F5DC7700479DDD /* DCTCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,14 @@
 			children = (
 				24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */,
 				24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */,
+				24948A2E16F5DC0100479DDD /* DCTOSGB36Coordinate.h */,
+				24948A2F16F5DC0100479DDD /* DCTOSGB36Coordinate.m */,
+				24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */,
+				24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */,
+				24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */,
+				24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */,
+				24948A3716F5DC7700479DDD /* DCTCoordinate.h */,
+				24948A3816F5DC7700479DDD /* DCTCoordinate.m */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
@@ -208,6 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */,
+				24948A3016F5DC0100479DDD /* DCTOSGB36Coordinate.m in Sources */,
+				24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */,
+				24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */,
+				24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
