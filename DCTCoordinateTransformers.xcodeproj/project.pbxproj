@@ -31,6 +31,7 @@
 		24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */; };
 		24948A5316F61E6B00479DDD /* GDYDatumTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5216F61E6B00479DDD /* GDYDatumTransform.m */; };
 		24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5816F64CE000479DDD /* GDYEllipsoid.m */; };
+		24948A5C16F6667000479DDD /* GDYDatum.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5B16F6667000479DDD /* GDYDatum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +85,8 @@
 		24948A5216F61E6B00479DDD /* GDYDatumTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYDatumTransform.m; sourceTree = "<group>"; };
 		24948A5716F64CE000479DDD /* GDYEllipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYEllipsoid.h; sourceTree = "<group>"; };
 		24948A5816F64CE000479DDD /* GDYEllipsoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYEllipsoid.m; sourceTree = "<group>"; };
+		24948A5A16F6666F00479DDD /* GDYDatum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYDatum.h; sourceTree = "<group>"; };
+		24948A5B16F6667000479DDD /* GDYDatum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYDatum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				24948A5216F61E6B00479DDD /* GDYDatumTransform.m */,
 				24948A5716F64CE000479DDD /* GDYEllipsoid.h */,
 				24948A5816F64CE000479DDD /* GDYEllipsoid.m */,
+				24948A5A16F6666F00479DDD /* GDYDatum.h */,
+				24948A5B16F6667000479DDD /* GDYDatum.m */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */,
 				24948A5316F61E6B00479DDD /* GDYDatumTransform.m in Sources */,
 				24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */,
+				24948A5C16F6667000479DDD /* GDYDatum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
