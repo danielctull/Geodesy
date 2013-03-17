@@ -10,6 +10,10 @@
 		24948A0916F5DAE100479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
 		24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */; };
 		24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */; };
+		24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */; };
+		24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1E16F5DB1E00479DDD /* UIKit.framework */; };
+		24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
+		24948A2616F5DB1E00479DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24948A2416F5DB1E00479DDD /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +32,13 @@
 /* Begin PBXFileReference section */
 		24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTCoordinateTransformers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A0816F5DAE100479DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24948A0C16F5DAE100479DDD /* DCTCoordinateTransformers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTCoordinateTransformers-Prefix.pch"; sourceTree = "<group>"; };
 		24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTCoordinateTransformers.h; sourceTree = "<group>"; };
 		24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinateTransformers.m; sourceTree = "<group>"; };
+		24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTCoordinateTransformersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		24948A1E16F5DB1E00479DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTCoordinateTransformersTests-Info.plist"; sourceTree = "<group>"; };
+		24948A2516F5DB1E00479DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24948A1716F5DB1E00479DDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */,
+				24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */,
+				24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				24948A0A16F5DAE100479DDD /* DCTCoordinateTransformers */,
+				24948A2116F5DB1E00479DDD /* DCTCoordinateTransformersTests */,
 				24948A0716F5DAE100479DDD /* Frameworks */,
 				24948A0616F5DAE100479DDD /* Products */,
 			);
@@ -58,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */,
+				24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				24948A0816F5DAE100479DDD /* Foundation.framework */,
+				24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */,
+				24948A1E16F5DB1E00479DDD /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,17 +97,17 @@
 			children = (
 				24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */,
 				24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */,
-				24948A0B16F5DAE100479DDD /* Supporting Files */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
 		};
-		24948A0B16F5DAE100479DDD /* Supporting Files */ = {
+		24948A2116F5DB1E00479DDD /* DCTCoordinateTransformersTests */ = {
 			isa = PBXGroup;
 			children = (
-				24948A0C16F5DAE100479DDD /* DCTCoordinateTransformers-Prefix.pch */,
+				24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */,
+				24948A2416F5DB1E00479DDD /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			path = DCTCoordinateTransformersTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +129,24 @@
 			productName = DCTCoordinateTransformers;
 			productReference = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		24948A1A16F5DB1E00479DDD /* DCTCoordinateTransformersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformersTests" */;
+			buildPhases = (
+				24948A1616F5DB1E00479DDD /* Sources */,
+				24948A1716F5DB1E00479DDD /* Frameworks */,
+				24948A1816F5DB1E00479DDD /* Resources */,
+				24948A1916F5DB1E00479DDD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCTCoordinateTransformersTests;
+			productName = DCTCoordinateTransformersTests;
+			productReference = 24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -130,9 +170,37 @@
 			projectRoot = "";
 			targets = (
 				24948A0416F5DAE100479DDD /* DCTCoordinateTransformers */,
+				24948A1A16F5DB1E00479DDD /* DCTCoordinateTransformersTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24948A1816F5DB1E00479DDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24948A2616F5DB1E00479DDD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24948A1916F5DB1E00479DDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24948A0116F5DAE100479DDD /* Sources */ = {
@@ -143,7 +211,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24948A1616F5DB1E00479DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		24948A2416F5DB1E00479DDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24948A2516F5DB1E00479DDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		24948A1116F5DAE100479DDD /* Debug */ = {
@@ -204,7 +290,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTCoordinateTransformers/DCTCoordinateTransformers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -216,10 +301,37 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTCoordinateTransformers/DCTCoordinateTransformers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		24948A2C16F5DB1E00479DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "DCTCoordinateTransformersTests/DCTCoordinateTransformersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		24948A2D16F5DB1E00479DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "DCTCoordinateTransformersTests/DCTCoordinateTransformersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -240,6 +352,14 @@
 			buildConfigurations = (
 				24948A1416F5DAE100479DDD /* Debug */,
 				24948A1516F5DAE100479DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24948A2C16F5DB1E00479DDD /* Debug */,
+				24948A2D16F5DB1E00479DDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
