@@ -18,6 +18,12 @@
 		24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */; };
 		24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */; };
 		24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* DCTCoordinate.m */; };
+		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
+		24948A3D16F5DF1C00479DDD /* DCTOSGB36Coordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A2E16F5DC0100479DDD /* DCTOSGB36Coordinate.h */; };
+		24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */; };
+		24948A3F16F5DF1C00479DDD /* DCTWGS84Coordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */; };
+		24948A4016F5DF1C00479DDD /* DCTCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* DCTCoordinate.h */; };
+		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +33,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				24948A3D16F5DF1C00479DDD /* DCTOSGB36Coordinate.h in CopyFiles */,
+				24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */,
+				24948A3F16F5DF1C00479DDD /* DCTWGS84Coordinate.h in CopyFiles */,
+				24948A4016F5DF1C00479DDD /* DCTCoordinate.h in CopyFiles */,
 				24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +61,8 @@
 		24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84Coordinate.m; sourceTree = "<group>"; };
 		24948A3716F5DC7700479DDD /* DCTCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTCoordinate.h; sourceTree = "<group>"; };
 		24948A3816F5DC7700479DDD /* DCTCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinate.m; sourceTree = "<group>"; };
+		24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinateTests.h; sourceTree = "<group>"; };
+		24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */,
 				24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */,
 				24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */,
 				24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */,
@@ -126,6 +139,8 @@
 			children = (
 				24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */,
 				24948A2416F5DB1E00479DDD /* InfoPlist.strings */,
+				24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */,
+				24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */,
 			);
 			path = DCTCoordinateTransformersTests;
 			sourceTree = "<group>";
@@ -239,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,12 @@
 @interface DCTOSGridRefCoordinate : DCTCoordinate
 
 - (id)initWithGridReference:(NSString *)gridReference;
-@property (nonatomic, readonly) NSString *gridReference;
+- (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;
+
+@property (nonatomic, readonly) NSInteger easting;
+@property (nonatomic, readonly) NSInteger northing;
+
+- (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures;
+- (NSString *)nationalGridSquare;
 
 @end
