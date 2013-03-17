@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "DCTWGS84Coordinate.h"
+#import "DCTWGS84ToOSGB36Transformer.h"
 #import "DCTOSGB36Coordinate.h"
 #import "DCTOSGB36ToGridRefTransformer.h"
 #import "DCTOSGridRefCoordinate.h"
-
 
 @interface DCTCoordinateTransformers : NSObject
 

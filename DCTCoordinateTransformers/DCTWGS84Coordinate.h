@@ -10,4 +10,8 @@
 
 @interface DCTWGS84Coordinate : NSObject
 
+- (id)initWithLatitude:(double)latitude longitude:(double)longitude;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
+
 @end

@@ -26,6 +26,8 @@
 		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
 		24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
+		24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */; };
+		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +71,10 @@
 		24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36ToGridRefTransformer.m; sourceTree = "<group>"; };
 		24948A4516F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGB36ToGridRefTransformerTests.h; sourceTree = "<group>"; };
 		24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36ToGridRefTransformerTests.m; sourceTree = "<group>"; };
+		24948A4816F6170500479DDD /* DCTWGS84ToOSGB36Transformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84ToOSGB36Transformer.h; sourceTree = "<group>"; };
+		24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84ToOSGB36Transformer.m; sourceTree = "<group>"; };
+		24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84ToOSGB36TransformerTests.h; sourceTree = "<group>"; };
+		24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84ToOSGB36TransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 				24948A3816F5DC7700479DDD /* DCTCoordinate.m */,
 				24948A4216F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.h */,
 				24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */,
+				24948A4816F6170500479DDD /* DCTWGS84ToOSGB36Transformer.h */,
+				24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
@@ -151,6 +159,8 @@
 				24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */,
 				24948A4516F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.h */,
 				24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */,
+				24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */,
+				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
 			);
 			path = DCTCoordinateTransformersTests;
 			sourceTree = "<group>";
@@ -258,6 +268,7 @@
 				24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */,
 				24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */,
 				24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */,
+				24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +278,7 @@
 			files = (
 				24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */,
 				24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */,
+				24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,30 @@
+//
+//  DCTWGS84ToOSGB36TransformerTests.m
+//  DCTCoordinateTransformers
+//
+//  Created by Daniel Tull on 17.03.2013.
+//  Copyright (c) 2013 Daniel Tull. All rights reserved.
+//
+
+#import "DCTWGS84ToOSGB36TransformerTests.h"
+#import <DCTCoordinateTransformers/DCTCoordinateTransformers.h>
+
+@implementation DCTWGS84ToOSGB36TransformerTests
+
+- (void)testTransform {
+	DCTWGS84Coordinate *WGS84Coordinate = [[DCTWGS84Coordinate alloc] initWithLatitude:52.657977 longitude:1.716038];
+	DCTWGS84ToOSGB36Transformer *transformer = [DCTWGS84ToOSGB36Transformer new];
+	DCTOSGB36Coordinate *OSGB36Coordinate = [transformer transformedValue:WGS84Coordinate];
+	STAssertTrue(OSGB36Coordinate.latitude > 52.6575 && OSGB36Coordinate.latitude < 52.6576, @"%@ should be between 52.6575 and 52.6576", @(OSGB36Coordinate.latitude));
+	STAssertTrue(OSGB36Coordinate.longitude > 1.7179 && OSGB36Coordinate.longitude < 1.7180, @"%@ should be between 1.7179 and 1.7180", @(OSGB36Coordinate.longitude));
+}
+
+- (void)testReverseTransform {
+	DCTOSGB36Coordinate *OSGB36Coordinate = [[DCTOSGB36Coordinate alloc] initWithLatitude:52.657568 longitude:1.717908];
+	DCTWGS84ToOSGB36Transformer *transformer = [DCTWGS84ToOSGB36Transformer new];
+	DCTWGS84Coordinate *WGS84Coordinate = [transformer reverseTransformedValue:OSGB36Coordinate];
+	STAssertTrue(WGS84Coordinate.latitude > 52.6579 && WGS84Coordinate.latitude < 52.6580, @"%@ should be between 52.6579 and 52.6580", @(WGS84Coordinate.latitude));
+	STAssertTrue(WGS84Coordinate.longitude > 1.7160 && WGS84Coordinate.longitude < 1.7161, @"%@ should be between 1.7179 and 1.7180", @(WGS84Coordinate.longitude));
+}
+
+@end
