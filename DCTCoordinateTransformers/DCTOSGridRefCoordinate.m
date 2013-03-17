@@ -83,15 +83,18 @@
 	if (northing100k > 12) return nil;
 	
 	// translate those into numeric equivalents of the grid letters
-	NSInteger eastingLetterValue = (19 - northing100k) - ((19 - northing100k) % 5) + floor((easting100k + 10) / 5);
-	NSInteger northingLetterValue = (((19 - northing100k) * 5) % 25) + (easting100k % 5);
+	unichar eastingLetterValue = (19 - northing100k) - ((19 - northing100k) % 5) + floor((easting100k + 10) / 5);
+	unichar northingLetterValue = (((19 - northing100k) * 5) % 25) + (easting100k % 5);
 	
 	// compensate for skipped 'I' and build grid letter-pairs
 	if (eastingLetterValue > 7) eastingLetterValue++;
 	if (northingLetterValue > 7) northingLetterValue++;
 	
-	NSString *eastingLetter = [NSString stringWithFormat:@"%c", (char)65+eastingLetterValue];
-	NSString *northingLetter = [NSString stringWithFormat:@"%c", (char)65+northingLetterValue];
+	eastingLetterValue+= 'A';
+	northingLetterValue+= 'A';
+	
+	NSString *eastingLetter = [NSString stringWithFormat:@"%c", eastingLetterValue];
+	NSString *northingLetter = [NSString stringWithFormat:@"%c", northingLetterValue];
 
 	return [NSString stringWithFormat:@"%@%@", eastingLetter, northingLetter];
 }
