@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24948A0916F5DAE100479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
+		24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */; };
+		24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		24948A0316F5DAE100479DDD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTCoordinateTransformers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24948A0816F5DAE100479DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24948A0C16F5DAE100479DDD /* DCTCoordinateTransformers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTCoordinateTransformers-Prefix.pch"; sourceTree = "<group>"; };
+		24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTCoordinateTransformers.h; sourceTree = "<group>"; };
+		24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinateTransformers.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24948A0216F5DAE100479DDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24948A0916F5DAE100479DDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		249489FC16F5DAE100479DDD = {
+			isa = PBXGroup;
+			children = (
+				24948A0A16F5DAE100479DDD /* DCTCoordinateTransformers */,
+				24948A0716F5DAE100479DDD /* Frameworks */,
+				24948A0616F5DAE100479DDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24948A0616F5DAE100479DDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24948A0716F5DAE100479DDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24948A0816F5DAE100479DDD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24948A0A16F5DAE100479DDD /* DCTCoordinateTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */,
+				24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */,
+				24948A0B16F5DAE100479DDD /* Supporting Files */,
+			);
+			path = DCTCoordinateTransformers;
+			sourceTree = "<group>";
+		};
+		24948A0B16F5DAE100479DDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24948A0C16F5DAE100479DDD /* DCTCoordinateTransformers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24948A0416F5DAE100479DDD /* DCTCoordinateTransformers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformers" */;
+			buildPhases = (
+				24948A0116F5DAE100479DDD /* Sources */,
+				24948A0216F5DAE100479DDD /* Frameworks */,
+				24948A0316F5DAE100479DDD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCTCoordinateTransformers;
+			productName = DCTCoordinateTransformers;
+			productReference = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		249489FD16F5DAE100479DDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Daniel Tull";
+			};
+			buildConfigurationList = 24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "DCTCoordinateTransformers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 249489FC16F5DAE100479DDD;
+			productRefGroup = 24948A0616F5DAE100479DDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24948A0416F5DAE100479DDD /* DCTCoordinateTransformers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24948A0116F5DAE100479DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		24948A1116F5DAE100479DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24948A1216F5DAE100479DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24948A1416F5DAE100479DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DCTCoordinateTransformers/DCTCoordinateTransformers-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		24948A1516F5DAE100479DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DCTCoordinateTransformers/DCTCoordinateTransformers-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "DCTCoordinateTransformers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24948A1116F5DAE100479DDD /* Debug */,
+				24948A1216F5DAE100479DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24948A1416F5DAE100479DDD /* Debug */,
+				24948A1516F5DAE100479DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 249489FD16F5DAE100479DDD /* Project object */;
+}
