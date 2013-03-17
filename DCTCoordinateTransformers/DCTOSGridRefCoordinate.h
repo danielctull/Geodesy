@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTCoordinate.h"
+#import <Foundation/Foundation.h>
 
-@interface DCTOSGridRefCoordinate : DCTCoordinate
+@interface DCTOSGridRefCoordinate : NSObject
 
 - (id)initWithGridReference:(NSString *)gridReference;
 - (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;

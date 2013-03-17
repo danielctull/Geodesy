@@ -1,5 +1,5 @@
 //
-//  DCTWGS84Coordinate.h
+//  DCTOSGB36ToGridRefTransformer.h
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.
@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DCTWGS84Coordinate : NSObject
-
+@interface DCTOSGB36ToGridRefTransformer : NSValueTransformer
 @end
