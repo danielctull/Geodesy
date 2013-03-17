@@ -10,10 +10,11 @@
 
 @implementation DCTCoordinate
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate {
+- (id)initWithLatitude:(double)latitude longitude:(double)longitude {
 	self = [self init];
 	if (!self) return nil;
-	_coordinate = coordinate;
+	_latitude = latitude;
+	_longitude = longitude;
 	return self;
 }
 

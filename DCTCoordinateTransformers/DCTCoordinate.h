@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-typedef double DCTCoordinateDegrees;
-
 @interface DCTCoordinate : NSObject
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+- (id)initWithLatitude:(double)latitude longitude:(double)longitude;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
 
 @end
