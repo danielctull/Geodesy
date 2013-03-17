@@ -13,10 +13,11 @@
 - (id)initWithGridReference:(NSString *)gridReference;
 - (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;
 
+@property (readonly) NSString *gridSquareLetters;
 @property (nonatomic, readonly) NSInteger easting;
 @property (nonatomic, readonly) NSInteger northing;
 
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures;
-- (NSString *)nationalGridSquare;
+
 
 @end
