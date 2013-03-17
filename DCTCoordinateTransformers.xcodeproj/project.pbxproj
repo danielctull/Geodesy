@@ -17,12 +17,12 @@
 		24948A3016F5DC0100479DDD /* DCTOSGB36Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A2F16F5DC0100479DDD /* DCTOSGB36Coordinate.m */; };
 		24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */; };
 		24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */; };
-		24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* DCTCoordinate.m */; };
+		24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* GDYCoordinate.m */; };
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
 		24948A3D16F5DF1C00479DDD /* DCTOSGB36Coordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A2E16F5DC0100479DDD /* DCTOSGB36Coordinate.h */; };
 		24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */; };
 		24948A3F16F5DF1C00479DDD /* DCTWGS84Coordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */; };
-		24948A4016F5DF1C00479DDD /* DCTCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* DCTCoordinate.h */; };
+		24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* GDYCoordinate.h */; };
 		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
 		24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
@@ -44,7 +44,7 @@
 				24948A3D16F5DF1C00479DDD /* DCTOSGB36Coordinate.h in CopyFiles */,
 				24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */,
 				24948A3F16F5DF1C00479DDD /* DCTWGS84Coordinate.h in CopyFiles */,
-				24948A4016F5DF1C00479DDD /* DCTCoordinate.h in CopyFiles */,
+				24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */,
 				24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,8 +67,8 @@
 		24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinate.m; sourceTree = "<group>"; };
 		24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84Coordinate.h; sourceTree = "<group>"; };
 		24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84Coordinate.m; sourceTree = "<group>"; };
-		24948A3716F5DC7700479DDD /* DCTCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTCoordinate.h; sourceTree = "<group>"; };
-		24948A3816F5DC7700479DDD /* DCTCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinate.m; sourceTree = "<group>"; };
+		24948A3716F5DC7700479DDD /* GDYCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinate.h; sourceTree = "<group>"; };
+		24948A3816F5DC7700479DDD /* GDYCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinate.m; sourceTree = "<group>"; };
 		24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinateTests.h; sourceTree = "<group>"; };
 		24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinateTests.m; sourceTree = "<group>"; };
 		24948A4216F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGB36ToGridRefTransformer.h; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 				24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */,
 				24948A3416F5DC3E00479DDD /* DCTWGS84Coordinate.h */,
 				24948A3516F5DC3E00479DDD /* DCTWGS84Coordinate.m */,
-				24948A3716F5DC7700479DDD /* DCTCoordinate.h */,
-				24948A3816F5DC7700479DDD /* DCTCoordinate.m */,
+				24948A3716F5DC7700479DDD /* GDYCoordinate.h */,
+				24948A3816F5DC7700479DDD /* GDYCoordinate.m */,
 				24948A4216F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.h */,
 				24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */,
 				24948A4816F6170500479DDD /* DCTWGS84ToOSGB36Transformer.h */,
@@ -286,7 +286,7 @@
 				24948A3016F5DC0100479DDD /* DCTOSGB36Coordinate.m in Sources */,
 				24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */,
 				24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */,
-				24948A3916F5DC7700479DDD /* DCTCoordinate.m in Sources */,
+				24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */,
 				24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */,
 				24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */,
 				24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */,

@@ -1,14 +1,14 @@
 //
-//  DCTCoordinate.m
+//  GDYCoordinate.m
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTCoordinate.h"
+#import "GDYCoordinate.h"
 
-@implementation DCTCoordinate
+@implementation GDYCoordinate
 
 - (id)initWithLatitude:(double)latitude longitude:(double)longitude{
 	GDYDatum *datum = [[GDYDatum alloc] initWithType:GDYDatumTypeWGS84];
@@ -24,5 +24,10 @@
 	return self;
 }
 
+- (GDYCoordinate *)coordinateWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid {
+	
+	
+	
+}
 
 @end

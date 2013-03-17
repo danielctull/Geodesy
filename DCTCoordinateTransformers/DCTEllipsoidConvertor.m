@@ -13,7 +13,7 @@
 @implementation DCTEllipsoidConvertor
 
 
-+ (DCTCoordinate *)convertCoordinate:(DCTCoordinate *)coordinate
++ (GDYCoordinate *)convertCoordinate:(GDYCoordinate *)coordinate
 					   fromEllipsoid:(GDYEllipsoid *)fromEllipsoid
 						 toEllipsoid:(GDYEllipsoid *)toEllipsoid
 				 usingDatumTransform:(GDYDatumTransform *)datumTransform {
@@ -72,7 +72,7 @@
 	double lambda = atan2(y2, x2);
 	H = p/cos(phi) - nu;
 	
-	return [[DCTCoordinate alloc] initWithLatitude:[self radiansToDegrees:phi] longitude:[self radiansToDegrees:lambda]];
+	return [[GDYCoordinate alloc] initWithLatitude:[self radiansToDegrees:phi] longitude:[self radiansToDegrees:lambda]];
 	
 }
 

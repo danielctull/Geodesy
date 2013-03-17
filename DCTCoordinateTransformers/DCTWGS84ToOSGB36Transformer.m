@@ -26,10 +26,10 @@
 	
 	DCTWGS84Coordinate *WGS84Coordinate = value;
 
-	DCTCoordinate *coordinate = [[DCTCoordinate alloc] initWithLatitude:WGS84Coordinate.latitude
+	GDYCoordinate *coordinate = [[GDYCoordinate alloc] initWithLatitude:WGS84Coordinate.latitude
 															  longitude:WGS84Coordinate.longitude];
 	
-	DCTCoordinate *transformedCoordinate = [DCTEllipsoidConvertor convertCoordinate:coordinate
+	GDYCoordinate *transformedCoordinate = [DCTEllipsoidConvertor convertCoordinate:coordinate
 																	  fromEllipsoid:[GDYEllipsoid WGS84Ellipsoid]
 																		toEllipsoid:[GDYEllipsoid Airy1830Ellipsoid]
 																usingDatumTransform:[GDYDatumTransform WGS84toOSGB36DatumTransform]];
@@ -42,10 +42,10 @@
 	
 	DCTOSGB36Coordinate *OSGB36Coordinate = value;
 	
-	DCTCoordinate *coordinate = [[DCTCoordinate alloc] initWithLatitude:OSGB36Coordinate.latitude
+	GDYCoordinate *coordinate = [[GDYCoordinate alloc] initWithLatitude:OSGB36Coordinate.latitude
 															  longitude:OSGB36Coordinate.longitude];
 	
-	DCTCoordinate *transformedCoordinate = [DCTEllipsoidConvertor convertCoordinate:coordinate
+	GDYCoordinate *transformedCoordinate = [DCTEllipsoidConvertor convertCoordinate:coordinate
 																	  fromEllipsoid:[GDYEllipsoid Airy1830Ellipsoid]
 																		toEllipsoid:[GDYEllipsoid WGS84Ellipsoid]
 																usingDatumTransform:[GDYDatumTransform OSGB36toWGS84DatumTransform]];

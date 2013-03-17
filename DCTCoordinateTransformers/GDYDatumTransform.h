@@ -1,5 +1,5 @@
 //
-//  GDYDatumTransform.h
+//  GDYDatumTransform
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.

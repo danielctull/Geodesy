@@ -1,5 +1,5 @@
 //
-//  DCTCoordinate.h
+//  GDYCoordinate.h
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.
@@ -11,7 +11,7 @@
 #import "GDYDatum.h"
 #import "GDYEllipsoid.h"
 
-@interface DCTCoordinate : NSObject
+@interface GDYCoordinate : NSObject
 
 /** Returns a coordinate in the WGS84 coordinate space.
  */
@@ -25,5 +25,7 @@
 @property (nonatomic, readonly) double longitude;
 @property (nonatomic, readonly) GDYDatum *datum;
 @property (nonatomic, readonly) GDYEllipsoid *ellipsoid;
+
+- (GDYCoordinate *)coordinateWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid;
 
 @end
