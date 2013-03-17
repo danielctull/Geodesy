@@ -30,6 +30,7 @@
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
 		24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */; };
 		24948A5316F61E6B00479DDD /* DCTDatumTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5216F61E6B00479DDD /* DCTDatumTransform.m */; };
+		24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5816F64CE000479DDD /* GDYEllipsoid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +82,8 @@
 		24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTEllipsoidConvertor.m; sourceTree = "<group>"; };
 		24948A5116F61E6A00479DDD /* DCTDatumTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTDatumTransform.h; sourceTree = "<group>"; };
 		24948A5216F61E6B00479DDD /* DCTDatumTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTDatumTransform.m; sourceTree = "<group>"; };
+		24948A5716F64CE000479DDD /* GDYEllipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYEllipsoid.h; sourceTree = "<group>"; };
+		24948A5816F64CE000479DDD /* GDYEllipsoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYEllipsoid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */,
 				24948A5116F61E6A00479DDD /* DCTDatumTransform.h */,
 				24948A5216F61E6B00479DDD /* DCTDatumTransform.m */,
+				24948A5716F64CE000479DDD /* GDYEllipsoid.h */,
+				24948A5816F64CE000479DDD /* GDYEllipsoid.m */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */,
 				24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */,
 				24948A5316F61E6B00479DDD /* DCTDatumTransform.m in Sources */,
+				24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

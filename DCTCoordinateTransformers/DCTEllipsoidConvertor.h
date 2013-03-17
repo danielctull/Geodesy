@@ -9,20 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "DCTCoordinate.h"
 #import "DCTDatumTransform.h"
-
-typedef NS_ENUM(NSInteger, DCTEllipsoidConvertorEllipse) {
-	DCTEllipsoidConvertorEllipseWGS84,
-	DCTEllipsoidConvertorEllipseGRS80,
-	DCTEllipsoidConvertorEllipseAiry1830,
-	DCTEllipsoidConvertorEllipseAiryModified,
-	DCTEllipsoidConvertorEllipseIntl1924
-};
+#import "GDYEllipsoid.h"
 
 @interface DCTEllipsoidConvertor : NSObject
 
 + (DCTCoordinate *)convertCoordinate:(DCTCoordinate *)coordinate
-						 fromEllipse:(DCTEllipsoidConvertorEllipse)ellipse
-						   toEllipse:(DCTEllipsoidConvertorEllipse)ellipse
+					   fromEllipsoid:(GDYEllipsoid *)fromEllipsoid
+						 toEllipsoid:(GDYEllipsoid *)toEllipsoid
 				 usingDatumTransform:(DCTDatumTransform *)datumTransform;
 
 @end

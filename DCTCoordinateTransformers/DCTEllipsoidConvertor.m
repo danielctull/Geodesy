@@ -10,50 +10,12 @@
 
 #import "DCTEllipsoidConvertor.h"
 
-@interface DCTEllipsoid : NSObject
-- (id)initWithA:(double)a b:(double)b f:(double)f;
-@property (nonatomic, readonly) double a;
-@property (nonatomic, readonly) double b;
-@property (nonatomic, readonly) double f;
-@end
-
-@implementation DCTEllipsoid
-
-- (id)initWithA:(double)a b:(double)b f:(double)f {
-	self = [self init];
-	if (!self) return nil;
-	_a = a;
-	_b = b;
-	_f = f;
-	return self;
-}
-
-@end
-
 @implementation DCTEllipsoidConvertor
-
-+ (DCTEllipsoid *)ellipseDictionaryForEllipse:(DCTEllipsoidConvertorEllipse)ellipse {
-	
-	static NSArray *ellipses;
-	static dispatch_once_t ellipsesToken;
-	dispatch_once(&ellipsesToken, ^{
-		
-		ellipses = @[
-			[[DCTEllipsoid alloc] initWithA:6378137			b:6356752.3142		f:1/298.257223563],
-			[[DCTEllipsoid alloc] initWithA:6378137			b:6356752.314140	f:1/298.257222101],
-			[[DCTEllipsoid alloc] initWithA:6377563.396		b:6356256.910		f:1/299.3249646],
-			[[DCTEllipsoid alloc] initWithA:6377340.189		b:6356034.448		f:1/299.32496],
-			[[DCTEllipsoid alloc] initWithA:6378388.000		b:6356911.946		f:1/297.0]
-		];
-	});
-	
-	return ellipses[ellipse];
-}
 
 
 + (DCTCoordinate *)convertCoordinate:(DCTCoordinate *)coordinate
-						 fromEllipse:(DCTEllipsoidConvertorEllipse)fromEllipse
-						   toEllipse:(DCTEllipsoidConvertorEllipse)toEllipse
+					   fromEllipsoid:(GDYEllipsoid *)fromEllipsoid
+						 toEllipsoid:(GDYEllipsoid *)toEllipsoid
 				 usingDatumTransform:(DCTDatumTransform *)datumTransform {
 	
 	// -- 1: convert polar to cartesian coordinates (using ellipse 1)
@@ -61,8 +23,8 @@
 	double lat = [self degreesToRadians:coordinate.latitude];
 	double lon = [self degreesToRadians:coordinate.longitude];
 	
-	DCTEllipsoid *e1 = [self ellipseDictionaryForEllipse:fromEllipse];
-	DCTEllipsoid *e2 = [self ellipseDictionaryForEllipse:toEllipse];
+	GDYEllipsoid *e1 = fromEllipsoid;
+	GDYEllipsoid *e2 = toEllipsoid;
 	
 	double a = e1.a, b = e1.b;
 	
