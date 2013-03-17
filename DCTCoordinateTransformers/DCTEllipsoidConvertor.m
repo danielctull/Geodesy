@@ -5,6 +5,8 @@
 //  Created by Daniel Tull on 17.03.2013.
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
+//	Based on http://www.movable-type.co.uk/scripts/latlong-convert-coords.html
+//
 
 #import "DCTEllipsoidConvertor.h"
 
