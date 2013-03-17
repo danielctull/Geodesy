@@ -1,14 +1,14 @@
 //
-//  DCTDatumTransform.m
+//  GDYDatumTransform.m
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTDatumTransform.h"
+#import "GDYDatumTransform.h"
 
-@implementation DCTDatumTransform
+@implementation GDYDatumTransform
 
 + (instancetype)WGS84toOSGB36DatumTransform {
 	return [[self alloc] initWithTransformX:-446.448

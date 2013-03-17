@@ -16,7 +16,7 @@
 + (DCTCoordinate *)convertCoordinate:(DCTCoordinate *)coordinate
 					   fromEllipsoid:(GDYEllipsoid *)fromEllipsoid
 						 toEllipsoid:(GDYEllipsoid *)toEllipsoid
-				 usingDatumTransform:(DCTDatumTransform *)datumTransform {
+				 usingDatumTransform:(GDYDatumTransform *)datumTransform {
 	
 	// -- 1: convert polar to cartesian coordinates (using ellipse 1)
 	

@@ -1,5 +1,5 @@
 //
-//  DCTDatumTransform.h
+//  GDYDatumTransform.h
 //  DCTCoordinateTransformers
 //
 //  Created by Daniel Tull on 17.03.2013.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DCTDatumTransform : NSObject
+@interface GDYDatumTransform : NSObject
 
 + (instancetype)WGS84toOSGB36DatumTransform;
 + (instancetype)OSGB36toWGS84DatumTransform;
@@ -28,5 +28,7 @@
 @property (nonatomic, readonly) double rotateY;
 @property (nonatomic, readonly) double rotateZ;
 @property (nonatomic, readonly) double scale;
+
+- (instancetype)inverseTransform;
 
 @end
