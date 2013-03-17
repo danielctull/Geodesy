@@ -26,7 +26,7 @@
 	GDYEllipsoid *e1 = fromEllipsoid;
 	GDYEllipsoid *e2 = toEllipsoid;
 	
-	double a = e1.a, b = e1.b;
+	double a = e1.semiMajorAxis, b = e1.semiMinorAxis;
 	
 	double sinPhi = sin(lat);
 	double cosPhi = cos(lat);
@@ -58,7 +58,7 @@
 	
 	// -- 3: convert cartesian to polar coordinates (using ellipse 2)
 	
-	a = e2.a, b = e2.b;
+	a = e2.semiMajorAxis, b = e2.semiMinorAxis;
 	double precision = 4 / a;  // results accurate to around 4 metres
 	
 	eSq = (a*a - b*b) / (a*a);

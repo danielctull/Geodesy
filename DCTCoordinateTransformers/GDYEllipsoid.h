@@ -16,9 +16,9 @@
 + (instancetype)AiryModifiedEllipsoid;
 + (instancetype)Intl1924Ellipsoid;
 
-- (id)initWithA:(double)a b:(double)b f:(double)f;
-@property (nonatomic, readonly) double a;
-@property (nonatomic, readonly) double b;
-@property (nonatomic, readonly) double f;
+- (id)initWithSemiMajorAxis:(double)semiMajorAxis semiMinorAxis:(double)semiMinorAxis inverseFlattening:(double)inverseFlattening;
+@property (nonatomic, readonly) double semiMajorAxis;
+@property (nonatomic, readonly) double semiMinorAxis;
+@property (nonatomic, readonly) double inverseFlattening;
 
 @end
