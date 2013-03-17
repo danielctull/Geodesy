@@ -15,8 +15,8 @@
 	DCTOSGB36Coordinate *OSGB36Coordinate = [[DCTOSGB36Coordinate alloc] initWithLatitude:52.657568 longitude:1.717908];
 	DCTOSGB36ToGridRefTransformer *transformer = [DCTOSGB36ToGridRefTransformer new];
 	DCTOSGridRefCoordinate *gridReference = [transformer transformedValue:OSGB36Coordinate];
-	STAssertTrue(gridReference.easting == 651409, @"%@ should equal 651409", @(gridReference.easting));
-	STAssertTrue(gridReference.northing == 313177, @"%@ should equal 313177", @(gridReference.easting));
+	STAssertTrue(gridReference.easting > 651400 && gridReference.easting < 651410, @"%@ should be between 65140 and 65141", @(gridReference.easting));
+	STAssertTrue(gridReference.northing > 313170 && gridReference.northing < 313180, @"%@ should be between 313170 and 313180", @(gridReference.northing));
 }
 
 - (void)testReverseTransform {

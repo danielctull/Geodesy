@@ -25,31 +25,17 @@
 	NSAssert([value isKindOfClass:[DCTOSGB36Coordinate class]], @"%@ should be a DCTOSGB36Coordinate", value);
 	
 	DCTOSGB36Coordinate *OSGB36Coordinate = value;
-	double lat = OSGB36Coordinate.latitude;
-	double lon = OSGB36Coordinate.longitude;
+	double lat = [self degreesToRadians:OSGB36Coordinate.latitude];
+	double lon = [self degreesToRadians:OSGB36Coordinate.longitude];
 	
-	// Airy 1830 major & minor semi-axes
-	double a = 6377563.396;
-	double b = 6356256.910;
-	
-	// NatGrid scale factor on central meridian
-	double F0 = 0.9996012717;
-	
-	// NatGrid true origin is 49ºN,2ºW
-	double lat0 = [self degreesToRadians:49];
-	double lon0 = [self degreesToRadians:-2];
-	
-	// northing & easting of true origin, metres
-	double N0 = -100000;
-	double E0 = 400000;
-	
-	// eccentricity squared
-	double e2 = 1 - (b*b)/(a*a);
-	
+	double a = 6377563.396, b = 6356256.910;          // Airy 1830 major & minor semi-axes
+	double F0 = 0.9996012717;                         // NatGrid scale factor on central meridian
+	double lat0 = [self degreesToRadians:49], lon0 = [self degreesToRadians:-2];  // NatGrid true origin is 49ºN,2ºW
+	double N0 = -100000, E0 = 400000;                 // northing & easting of true origin, metres
+	double e2 = 1 - (b*b)/(a*a);                      // eccentricity squared
 	double n = (a-b)/(a+b), n2 = n*n, n3 = n*n*n;
 	
-	double cosLat = cos(lat);
-	double sinLat = sin(lat);
+	double cosLat = cos(lat), sinLat = sin(lat);
 	double nu = a*F0/sqrt(1-e2*sinLat*sinLat);              // transverse radius of curvature
 	double rho = a*F0*(1-e2)/pow(1-e2*sinLat*sinLat, 1.5);  // meridional radius of curvature
 	double eta2 = nu/rho-1;
@@ -76,10 +62,10 @@
 	double dLon = lon-lon0;
 	double dLon2 = dLon*dLon, dLon3 = dLon2*dLon, dLon4 = dLon3*dLon, dLon5 = dLon4*dLon, dLon6 = dLon5*dLon;
 	
-	NSInteger northing = I + II*dLon2 + III*dLon4 + IIIA*dLon6;
-	NSInteger easting = E0 + IV*dLon + V*dLon3 + VI*dLon5;
+	double N = I + II*dLon2 + III*dLon4 + IIIA*dLon6;
+	double E = E0 + IV*dLon + V*dLon3 + VI*dLon5;
 	
-	return [[DCTOSGridRefCoordinate alloc] initWithEasting:easting northing:northing];
+	return [[DCTOSGridRefCoordinate alloc] initWithEasting:E northing:N];
 }
 
 - (id)reverseTransformedValue:(id)value {
@@ -137,7 +123,7 @@
 }
 
 - (double)degreesToRadians:(double)degrees {
-	return degrees / M_PI * 180;
+	return degrees / 180.0f * M_PI;
 }
 
 @end

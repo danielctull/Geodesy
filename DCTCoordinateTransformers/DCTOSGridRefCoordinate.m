@@ -20,8 +20,6 @@
 	NSArray *array = [gridReference componentsSeparatedByCharactersInSet:characterSet];
 	gridReference = [array componentsJoinedByString:@""];
 	
-	NSLog(@"Grid Reference: %@", gridReference);
-	
 	if (gridReference.length < 2) return 0;
 	
 	// get numeric values of letter references, mapping A->0, B->1, C->2, etc:
