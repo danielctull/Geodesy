@@ -33,20 +33,13 @@
 
 - (GDYCoordinate *)convertCoordinate:(GDYCoordinate *)coordinate toSystem:(GDYCoordinateSystem *)newSystem {
 	
-	GDYDatumType fromType = coordinate.coordinateSystem.datum.type;
-	GDYDatumType toType = newSystem.datum.type;
-	
-	if (fromType != GDYDatumTypeWGS84 && toType != GDYDatumTypeWGS84) {
+	if (coordinate.coordinateSystem.datum.type != GDYDatumTypeWGS84 && newSystem.datum.type != GDYDatumTypeWGS84) {
 		GDYCoordinateSystem *midSystem = [GDYCoordinateSystem WGS84CoordinateSystem];
 		coordinate = [midSystem convertCoordinate:coordinate toSystem:midSystem];
 	}
 
-	// May have changed because of the above if statement
-	fromType = coordinate.coordinateSystem.datum.type;
-
 	GDYHelmertDatumTransform *datumTransform;
-	
-	if (fromType == GDYDatumTypeWGS84)
+	if (coordinate.coordinateSystem.datum.type == GDYDatumTypeWGS84)
 		datumTransform = [newSystem.datum transformFromWGS84];
 	else
 		datumTransform = [coordinate.coordinateSystem.datum transformToWGS84];
