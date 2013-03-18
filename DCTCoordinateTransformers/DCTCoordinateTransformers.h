@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DCTOSGridRefCoordinate.h"
+#import "GDYOSGridReference.h"
 #import "GDYCoordinate.h"
 
 @interface DCTCoordinateTransformers : NSObject

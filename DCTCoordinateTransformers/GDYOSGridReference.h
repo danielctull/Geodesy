@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GDYCoordinate.h"
 
-@interface DCTOSGridRefCoordinate : NSObject
+@interface GDYOSGridReference : NSObject
 
 - (id)initWithGridReference:(NSString *)gridReference;
 - (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;

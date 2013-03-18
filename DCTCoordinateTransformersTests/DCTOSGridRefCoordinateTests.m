@@ -7,29 +7,29 @@
 //
 
 #import "DCTOSGridRefCoordinateTests.h"
-#import <DCTCoordinateTransformers/DCTOSGridRefCoordinate.h>
+#import <DCTCoordinateTransformers/DCTCoordinateTransformers.h>
 
 @implementation DCTOSGridRefCoordinateTests
 
 - (void)testNormalizeGridReference {
-	DCTOSGridRefCoordinate *coordinate = [[DCTOSGridRefCoordinate alloc] initWithGridReference:@"TG 51409 13177"];
+	GDYOSGridReference *coordinate = [[GDYOSGridReference alloc] initWithGridReference:@"TG 51409 13177"];
 	STAssertTrue([coordinate.gridSquareLetters isEqualToString:@"TG"], @"%@ should be TG", coordinate.gridSquareLetters);
 	STAssertTrue(coordinate.easting == 651409, @"%@ should equal 651409", @(coordinate.easting));
 	STAssertTrue(coordinate.northing == 313177, @"%@ should equal 313177", @(coordinate.easting));
 	
-	coordinate = [[DCTOSGridRefCoordinate alloc] initWithGridReference:@"TG51"];
+	coordinate = [[GDYOSGridReference alloc] initWithGridReference:@"TG51"];
 	STAssertTrue([coordinate.gridSquareLetters isEqualToString:@"TG"], @"%@ should be TG", coordinate.gridSquareLetters);
 	STAssertTrue(coordinate.easting == 655000, @"%@ should equal 655000", @(coordinate.easting));
 	STAssertTrue(coordinate.northing == 315000, @"%@ should equal 315000", @(coordinate.easting));
 }
 
 - (void)testGridLetterGeneration {
-	DCTOSGridRefCoordinate *coordinate = [[DCTOSGridRefCoordinate alloc] initWithEasting:651409 northing:313177];
+	GDYOSGridReference *coordinate = [[GDYOSGridReference alloc] initWithEasting:651409 northing:313177];
 	STAssertTrue([coordinate.gridSquareLetters isEqualToString:@"TG"], @"%@ should be TG", coordinate.gridSquareLetters);
 }
 
 - (void)testGridReferenceGeneration {
-	DCTOSGridRefCoordinate *coordinate = [[DCTOSGridRefCoordinate alloc] initWithEasting:651409 northing:313177];
+	GDYOSGridReference *coordinate = [[GDYOSGridReference alloc] initWithEasting:651409 northing:313177];
 	NSString *gridReference = [coordinate gridReferenceWithNumberOfFigures:2];
 	NSString *expectedGridReference = @"TG 5 1";
 	STAssertTrue([gridReference isEqualToString:expectedGridReference], @"%@ should be %@", gridReference, expectedGridReference);

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTOSGridRefCoordinate.h"
+#import "GDYOSGridReference.h"
 
-@implementation DCTOSGridRefCoordinate
+@implementation GDYOSGridReference
 
 - (id)initWithCoordinate:(GDYCoordinate *)coordinate {
 	self = [self init];

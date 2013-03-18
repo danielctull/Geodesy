@@ -14,10 +14,10 @@
 		24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1E16F5DB1E00479DDD /* UIKit.framework */; };
 		24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
 		24948A2616F5DB1E00479DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24948A2416F5DB1E00479DDD /* InfoPlist.strings */; };
-		24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */; };
+		24948A3316F5DC2700479DDD /* GDYOSGridReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* GDYOSGridReference.m */; };
 		24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* GDYCoordinate.m */; };
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
-		24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */; };
+		24948A3E16F5DF1C00479DDD /* GDYOSGridReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* GDYOSGridReference.h */; };
 		24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* GDYCoordinate.h */; };
 		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
@@ -43,7 +43,7 @@
 				24948A6416F7105E00479DDD /* GDYEllipsoid.h in CopyFiles */,
 				24948A6516F7105E00479DDD /* GDYDatum.h in CopyFiles */,
 				24948A6616F7105E00479DDD /* GDYCoordinateSystem.h in CopyFiles */,
-				24948A3E16F5DF1C00479DDD /* DCTOSGridRefCoordinate.h in CopyFiles */,
+				24948A3E16F5DF1C00479DDD /* GDYOSGridReference.h in CopyFiles */,
 				24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */,
 				24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */,
 			);
@@ -61,8 +61,8 @@
 		24948A1E16F5DB1E00479DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTCoordinateTransformersTests-Info.plist"; sourceTree = "<group>"; };
 		24948A2516F5DB1E00479DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinate.h; sourceTree = "<group>"; };
-		24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinate.m; sourceTree = "<group>"; };
+		24948A3116F5DC2700479DDD /* GDYOSGridReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYOSGridReference.h; sourceTree = "<group>"; };
+		24948A3216F5DC2700479DDD /* GDYOSGridReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYOSGridReference.m; sourceTree = "<group>"; };
 		24948A3716F5DC7700479DDD /* GDYCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinate.h; sourceTree = "<group>"; };
 		24948A3816F5DC7700479DDD /* GDYCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinate.m; sourceTree = "<group>"; };
 		24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinateTests.h; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 			children = (
 				24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */,
 				24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */,
-				24948A3116F5DC2700479DDD /* DCTOSGridRefCoordinate.h */,
-				24948A3216F5DC2700479DDD /* DCTOSGridRefCoordinate.m */,
+				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
+				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
 				24948A3716F5DC7700479DDD /* GDYCoordinate.h */,
 				24948A3816F5DC7700479DDD /* GDYCoordinate.m */,
 				24948A5116F61E6A00479DDD /* GDYHelmertDatumTransform.h */,
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */,
-				24948A3316F5DC2700479DDD /* DCTOSGridRefCoordinate.m in Sources */,
+				24948A3316F5DC2700479DDD /* GDYOSGridReference.m in Sources */,
 				24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */,
 				24948A5316F61E6B00479DDD /* GDYHelmertDatumTransform.m in Sources */,
 				24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */,
