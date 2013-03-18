@@ -148,8 +148,7 @@
 				24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */,
 				24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */,
 			);
-			name = Geodesy;
-			path = DCTCoordinateTransformers;
+			path = Geodesy;
 			sourceTree = "<group>";
 		};
 		24948A2116F5DB1E00479DDD /* GeodesyTests */ = {
@@ -164,8 +163,7 @@
 				24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */,
 				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
 			);
-			name = GeodesyTests;
-			path = DCTCoordinateTransformersTests;
+			path = GeodesyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +352,6 @@
 		24948A1416F5DAE100479DDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Geodesy;
@@ -365,7 +362,6 @@
 		24948A1516F5DAE100479DDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Geodesy;
@@ -381,7 +377,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "DCTCoordinateTransformersTests/GeodesyTests-Info.plist";
+				INFOPLIST_FILE = "GeodesyTests/GeodesyTests-Info.plist";
 				PRODUCT_NAME = GeodesyTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -395,7 +391,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "DCTCoordinateTransformersTests/GeodesyTests-Info.plist";
+				INFOPLIST_FILE = "GeodesyTests/GeodesyTests-Info.plist";
 				PRODUCT_NAME = GeodesyTests;
 				WRAPPER_EXTENSION = octest;
 			};
