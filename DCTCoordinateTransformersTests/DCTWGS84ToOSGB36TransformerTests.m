@@ -13,7 +13,7 @@
 
 - (void)testTransform {
 	GDYCoordinate *WGS84Coordinate = [[GDYCoordinate alloc] initWithLatitude:52.657977 longitude:1.716038];
-	GDYCoordinate *OSGB36Coordinate = [WGS84Coordinate convertToSystem:[GDYCoordinateSystem OSGB36CoordinateSystem]];
+	GDYCoordinate *OSGB36Coordinate = [WGS84Coordinate convertToCoordinateSystem:[GDYCoordinateSystem OSGB36CoordinateSystem]];
 	STAssertTrue(OSGB36Coordinate.latitude > 52.6575 && OSGB36Coordinate.latitude < 52.6576, @"%@ should be between 52.6575 and 52.6576", @(OSGB36Coordinate.latitude));
 	STAssertTrue(OSGB36Coordinate.longitude > 1.7179 && OSGB36Coordinate.longitude < 1.7180, @"%@ should be between 1.7179 and 1.7180", @(OSGB36Coordinate.longitude));
 }
@@ -25,7 +25,7 @@
 																	longitude:1.717908
 															 coordinateSystem:[GDYCoordinateSystem OSGB36CoordinateSystem]];
 	
-	GDYCoordinate *WGS84Coordinate = [OSGB36Coordinate convertToSystem:[GDYCoordinateSystem WGS84CoordinateSystem]];
+	GDYCoordinate *WGS84Coordinate = [OSGB36Coordinate convertToCoordinateSystem:[GDYCoordinateSystem WGS84CoordinateSystem]];
 	
 	STAssertTrue(WGS84Coordinate.latitude > 52.6579 && WGS84Coordinate.latitude < 52.6580, @"%@ should be between 52.6579 and 52.6580", @(WGS84Coordinate.latitude));
 	STAssertTrue(WGS84Coordinate.longitude > 1.7160 && WGS84Coordinate.longitude < 1.7161, @"%@ should be between 1.7179 and 1.7180", @(WGS84Coordinate.longitude));

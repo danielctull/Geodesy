@@ -26,7 +26,7 @@
 	return self;
 }
 
-- (GDYCoordinate *)convertToSystem:(GDYCoordinateSystem *)coordinateSystem {
+- (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem {
 	return [self.coordinateSystem convertCoordinate:self toSystem:coordinateSystem];
 }
 

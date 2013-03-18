@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GDYCoordinate.h"
 
 @interface DCTOSGridRefCoordinate : NSObject
 
@@ -19,5 +20,7 @@
 
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures;
 
+- (id)initWithCoordinate:(GDYCoordinate *)coordinate;
+- (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
 
 @end

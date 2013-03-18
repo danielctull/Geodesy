@@ -24,6 +24,6 @@
 @property (nonatomic, readonly) double longitude;
 @property (nonatomic, readonly) GDYCoordinateSystem *coordinateSystem;
 
-- (GDYCoordinate *)convertToSystem:(GDYCoordinateSystem *)coordinateSystem;
+- (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
 
 @end
