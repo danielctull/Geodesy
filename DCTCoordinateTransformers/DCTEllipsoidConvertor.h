@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GDYCoordinate.h"
-#import "GDYDatumTransform.h"
+#import "GDYHelmertDatumTransform.h"
 #import "GDYEllipsoid.h"
 
 @interface DCTEllipsoidConvertor : NSObject
@@ -16,6 +16,6 @@
 + (GDYCoordinate *)convertCoordinate:(GDYCoordinate *)coordinate
 					   fromEllipsoid:(GDYEllipsoid *)fromEllipsoid
 						 toEllipsoid:(GDYEllipsoid *)toEllipsoid
-				 usingDatumTransform:(GDYDatumTransform *)datumTransform;
+				 usingDatumTransform:(GDYHelmertDatumTransform *)datumTransform;
 
 @end

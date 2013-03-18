@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "GDYDatumTransform.h"
+#import "GDYHelmertDatumTransform.h"
 
-@implementation GDYDatumTransform
+@implementation GDYHelmertDatumTransform
 
 + (instancetype)WGS84toOSGB36DatumTransform {
 	return [[self alloc] initWithTransformX:-446.448

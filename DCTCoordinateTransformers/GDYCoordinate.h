@@ -26,6 +26,4 @@
 @property (nonatomic, readonly) GDYDatum *datum;
 @property (nonatomic, readonly) GDYEllipsoid *ellipsoid;
 
-- (GDYCoordinate *)coordinateWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid;
-
 @end

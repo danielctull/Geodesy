@@ -21,13 +21,9 @@
 	if (!self) return nil;
 	_latitude = latitude;
 	_longitude = longitude;
+	_datum = datum;
+	_ellipsoid = ellipsoid;
 	return self;
-}
-
-- (GDYCoordinate *)coordinateWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid {
-	
-	
-	
 }
 
 @end

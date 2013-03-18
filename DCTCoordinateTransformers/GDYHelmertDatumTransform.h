@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GDYDatumTransform : NSObject
+@interface GDYHelmertDatumTransform : NSObject
 
 + (instancetype)WGS84toOSGB36DatumTransform;
 + (instancetype)OSGB36toWGS84DatumTransform;
