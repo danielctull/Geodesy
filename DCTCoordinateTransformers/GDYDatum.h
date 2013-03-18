@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GDYHelmertDatumTransform.h"
 
 typedef NS_ENUM(NSInteger, GDYDatumType) {
 	GDYDatumTypeWGS84,
@@ -17,5 +18,8 @@ typedef NS_ENUM(NSInteger, GDYDatumType) {
 
 - (id)initWithType:(GDYDatumType)type;
 @property (nonatomic, readonly) GDYDatumType type;
+
+- (GDYHelmertDatumTransform *)transformToWGS84;
+- (GDYHelmertDatumTransform *)transformFromWGS84;
 
 @end

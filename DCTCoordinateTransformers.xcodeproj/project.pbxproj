@@ -26,12 +26,12 @@
 		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
 		24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
-		24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */; };
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
 		24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */; };
 		24948A5316F61E6B00479DDD /* GDYHelmertDatumTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5216F61E6B00479DDD /* GDYHelmertDatumTransform.m */; };
 		24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5816F64CE000479DDD /* GDYEllipsoid.m */; };
 		24948A5C16F6667000479DDD /* GDYDatum.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5B16F6667000479DDD /* GDYDatum.m */; };
+		24948A6216F6FFF500479DDD /* GDYCoordinateSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,8 +75,6 @@
 		24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36ToGridRefTransformer.m; sourceTree = "<group>"; };
 		24948A4516F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGB36ToGridRefTransformerTests.h; sourceTree = "<group>"; };
 		24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36ToGridRefTransformerTests.m; sourceTree = "<group>"; };
-		24948A4816F6170500479DDD /* DCTWGS84ToOSGB36Transformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84ToOSGB36Transformer.h; sourceTree = "<group>"; };
-		24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84ToOSGB36Transformer.m; sourceTree = "<group>"; };
 		24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84ToOSGB36TransformerTests.h; sourceTree = "<group>"; };
 		24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84ToOSGB36TransformerTests.m; sourceTree = "<group>"; };
 		24948A4E16F61AC200479DDD /* DCTEllipsoidConvertor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTEllipsoidConvertor.h; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		24948A5816F64CE000479DDD /* GDYEllipsoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYEllipsoid.m; sourceTree = "<group>"; };
 		24948A5A16F6666F00479DDD /* GDYDatum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYDatum.h; sourceTree = "<group>"; };
 		24948A5B16F6667000479DDD /* GDYDatum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYDatum.m; sourceTree = "<group>"; };
+		24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateSystem.h; sourceTree = "<group>"; };
+		24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateSystem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,6 @@
 				24948A3816F5DC7700479DDD /* GDYCoordinate.m */,
 				24948A4216F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.h */,
 				24948A4316F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m */,
-				24948A4816F6170500479DDD /* DCTWGS84ToOSGB36Transformer.h */,
-				24948A4916F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m */,
 				24948A4E16F61AC200479DDD /* DCTEllipsoidConvertor.h */,
 				24948A4F16F61AC200479DDD /* DCTEllipsoidConvertor.m */,
 				24948A5116F61E6A00479DDD /* GDYHelmertDatumTransform.h */,
@@ -166,6 +164,8 @@
 				24948A5816F64CE000479DDD /* GDYEllipsoid.m */,
 				24948A5A16F6666F00479DDD /* GDYDatum.h */,
 				24948A5B16F6667000479DDD /* GDYDatum.m */,
+				24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */,
+				24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */,
 			);
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
@@ -288,11 +288,11 @@
 				24948A3616F5DC3E00479DDD /* DCTWGS84Coordinate.m in Sources */,
 				24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */,
 				24948A4416F605FD00479DDD /* DCTOSGB36ToGridRefTransformer.m in Sources */,
-				24948A4A16F6170500479DDD /* DCTWGS84ToOSGB36Transformer.m in Sources */,
 				24948A5016F61AC200479DDD /* DCTEllipsoidConvertor.m in Sources */,
 				24948A5316F61E6B00479DDD /* GDYHelmertDatumTransform.m in Sources */,
 				24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */,
 				24948A5C16F6667000479DDD /* GDYDatum.m in Sources */,
+				24948A6216F6FFF500479DDD /* GDYCoordinateSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

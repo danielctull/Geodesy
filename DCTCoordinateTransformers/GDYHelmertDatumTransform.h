@@ -10,9 +10,6 @@
 
 @interface GDYHelmertDatumTransform : NSObject
 
-+ (instancetype)WGS84toOSGB36DatumTransform;
-+ (instancetype)OSGB36toWGS84DatumTransform;
-
 - (id)initWithTransformX:(double)transformX
 			  transformY:(double)transformY
 			  transformZ:(double)transformZ

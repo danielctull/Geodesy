@@ -17,4 +17,26 @@
 	return self;
 }
 
+- (GDYHelmertDatumTransform *)transformToWGS84 {
+	return [[self transformFromWGS84] inverseTransform];
+}
+
+- (GDYHelmertDatumTransform *)transformFromWGS84 {
+	switch (self.type) {
+		case GDYDatumTypeWGS84:
+			return nil;
+			break;
+			
+		case GDYDatumTypeOSGB36:
+			return [[GDYHelmertDatumTransform alloc] initWithTransformX:-446.448
+															 transformY:125.157
+															 transformZ:-542.060
+																rotateX:-0.1502
+																rotateY:-0.2470
+																rotateZ:-0.8421
+																  scale:20.4894];
+			break;
+	}
+}
+
 @end

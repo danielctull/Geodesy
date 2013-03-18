@@ -11,7 +11,7 @@
 @implementation GDYHelmertDatumTransform
 
 + (instancetype)WGS84toOSGB36DatumTransform {
-	return [[self alloc] initWithTransformX:-446.448
+	return [[GDYHelmertDatumTransform alloc] initWithTransformX:-446.448
 								 transformY:125.157
 								 transformZ:-542.060
 									rotateX:-0.1502
