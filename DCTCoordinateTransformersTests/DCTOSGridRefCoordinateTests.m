@@ -7,7 +7,7 @@
 //
 
 #import "DCTOSGridRefCoordinateTests.h"
-#import <DCTCoordinateTransformers/DCTCoordinateTransformers.h>
+#import <Geodesy/Geodesy.h>
 
 @implementation DCTOSGridRefCoordinateTests
 

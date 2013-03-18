@@ -7,7 +7,7 @@
 //
 
 #import "DCTWGS84ToOSGB36TransformerTests.h"
-#import <DCTCoordinateTransformers/DCTCoordinateTransformers.h>
+#import <Geodesy/Geodesy.h>
 
 @implementation DCTWGS84ToOSGB36TransformerTests
 

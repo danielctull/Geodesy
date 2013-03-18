@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24948A0916F5DAE100479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
-		24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */; };
-		24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */; };
+		24948A0E16F5DAE100479DDD /* Geodesy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* Geodesy.h */; };
 		24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */; };
 		24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1E16F5DB1E00479DDD /* UIKit.framework */; };
 		24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
@@ -19,7 +18,7 @@
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
 		24948A3E16F5DF1C00479DDD /* GDYOSGridReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* GDYOSGridReference.h */; };
 		24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* GDYCoordinate.h */; };
-		24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */; };
+		24948A4116F5E36100479DDD /* libGeodesy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0516F5DAE100479DDD /* libGeodesy.a */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
 		24948A5316F61E6B00479DDD /* GDYHelmertDatumTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5216F61E6B00479DDD /* GDYHelmertDatumTransform.m */; };
@@ -45,21 +44,20 @@
 				24948A6616F7105E00479DDD /* GDYCoordinateSystem.h in CopyFiles */,
 				24948A3E16F5DF1C00479DDD /* GDYOSGridReference.h in CopyFiles */,
 				24948A4016F5DF1C00479DDD /* GDYCoordinate.h in CopyFiles */,
-				24948A0E16F5DAE100479DDD /* DCTCoordinateTransformers.h in CopyFiles */,
+				24948A0E16F5DAE100479DDD /* Geodesy.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTCoordinateTransformers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24948A0516F5DAE100479DDD /* libGeodesy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGeodesy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A0816F5DAE100479DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTCoordinateTransformers.h; sourceTree = "<group>"; };
-		24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTCoordinateTransformers.m; sourceTree = "<group>"; };
-		24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTCoordinateTransformersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
+		24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeodesyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		24948A1E16F5DB1E00479DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTCoordinateTransformersTests-Info.plist"; sourceTree = "<group>"; };
+		24948A2316F5DB1E00479DDD /* GeodesyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeodesyTests-Info.plist"; sourceTree = "<group>"; };
 		24948A2516F5DB1E00479DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24948A3116F5DC2700479DDD /* GDYOSGridReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYOSGridReference.h; sourceTree = "<group>"; };
 		24948A3216F5DC2700479DDD /* GDYOSGridReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYOSGridReference.m; sourceTree = "<group>"; };
@@ -94,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24948A4116F5E36100479DDD /* libDCTCoordinateTransformers.a in Frameworks */,
+				24948A4116F5E36100479DDD /* libGeodesy.a in Frameworks */,
 				24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */,
 				24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */,
 				24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */,
@@ -107,8 +105,8 @@
 		249489FC16F5DAE100479DDD = {
 			isa = PBXGroup;
 			children = (
-				24948A0A16F5DAE100479DDD /* DCTCoordinateTransformers */,
-				24948A2116F5DB1E00479DDD /* DCTCoordinateTransformersTests */,
+				24948A0A16F5DAE100479DDD /* Geodesy */,
+				24948A2116F5DB1E00479DDD /* GeodesyTests */,
 				24948A0716F5DAE100479DDD /* Frameworks */,
 				24948A0616F5DAE100479DDD /* Products */,
 			);
@@ -117,8 +115,8 @@
 		24948A0616F5DAE100479DDD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */,
-				24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */,
+				24948A0516F5DAE100479DDD /* libGeodesy.a */,
+				24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,11 +131,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		24948A0A16F5DAE100479DDD /* DCTCoordinateTransformers */ = {
+		24948A0A16F5DAE100479DDD /* Geodesy */ = {
 			isa = PBXGroup;
 			children = (
-				24948A0D16F5DAE100479DDD /* DCTCoordinateTransformers.h */,
-				24948A0F16F5DAE100479DDD /* DCTCoordinateTransformers.m */,
+				24948A0D16F5DAE100479DDD /* Geodesy.h */,
 				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
 				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
 				24948A3716F5DC7700479DDD /* GDYCoordinate.h */,
@@ -151,13 +148,14 @@
 				24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */,
 				24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */,
 			);
+			name = Geodesy;
 			path = DCTCoordinateTransformers;
 			sourceTree = "<group>";
 		};
-		24948A2116F5DB1E00479DDD /* DCTCoordinateTransformersTests */ = {
+		24948A2116F5DB1E00479DDD /* GeodesyTests */ = {
 			isa = PBXGroup;
 			children = (
-				24948A2316F5DB1E00479DDD /* DCTCoordinateTransformersTests-Info.plist */,
+				24948A2316F5DB1E00479DDD /* GeodesyTests-Info.plist */,
 				24948A2416F5DB1E00479DDD /* InfoPlist.strings */,
 				24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */,
 				24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */,
@@ -166,15 +164,16 @@
 				24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */,
 				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
 			);
+			name = GeodesyTests;
 			path = DCTCoordinateTransformersTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24948A0416F5DAE100479DDD /* DCTCoordinateTransformers */ = {
+		24948A0416F5DAE100479DDD /* Geodesy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformers" */;
+			buildConfigurationList = 24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "Geodesy" */;
 			buildPhases = (
 				24948A0116F5DAE100479DDD /* Sources */,
 				24948A0216F5DAE100479DDD /* Frameworks */,
@@ -184,14 +183,14 @@
 			);
 			dependencies = (
 			);
-			name = DCTCoordinateTransformers;
+			name = Geodesy;
 			productName = DCTCoordinateTransformers;
-			productReference = 24948A0516F5DAE100479DDD /* libDCTCoordinateTransformers.a */;
+			productReference = 24948A0516F5DAE100479DDD /* libGeodesy.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		24948A1A16F5DB1E00479DDD /* DCTCoordinateTransformersTests */ = {
+		24948A1A16F5DB1E00479DDD /* GeodesyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformersTests" */;
+			buildConfigurationList = 24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "GeodesyTests" */;
 			buildPhases = (
 				24948A1616F5DB1E00479DDD /* Sources */,
 				24948A1716F5DB1E00479DDD /* Frameworks */,
@@ -202,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = DCTCoordinateTransformersTests;
+			name = GeodesyTests;
 			productName = DCTCoordinateTransformersTests;
-			productReference = 24948A1B16F5DB1E00479DDD /* DCTCoordinateTransformersTests.octest */;
+			productReference = 24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +215,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Daniel Tull";
 			};
-			buildConfigurationList = 24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "DCTCoordinateTransformers" */;
+			buildConfigurationList = 24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "Geodesy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24948A0416F5DAE100479DDD /* DCTCoordinateTransformers */,
-				24948A1A16F5DB1E00479DDD /* DCTCoordinateTransformersTests */,
+				24948A0416F5DAE100479DDD /* Geodesy */,
+				24948A1A16F5DB1E00479DDD /* GeodesyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24948A1016F5DAE100479DDD /* DCTCoordinateTransformers.m in Sources */,
 				24948A3316F5DC2700479DDD /* GDYOSGridReference.m in Sources */,
 				24948A3916F5DC7700479DDD /* GDYCoordinate.m in Sources */,
 				24948A5316F61E6B00479DDD /* GDYHelmertDatumTransform.m in Sources */,
@@ -359,7 +357,7 @@
 				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Geodesy;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -370,7 +368,7 @@
 				DSTROOT = /tmp/DCTCoordinateTransformers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Geodesy;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -383,8 +381,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "DCTCoordinateTransformersTests/DCTCoordinateTransformersTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DCTCoordinateTransformersTests/GeodesyTests-Info.plist";
+				PRODUCT_NAME = GeodesyTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -397,8 +395,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "DCTCoordinateTransformersTests/DCTCoordinateTransformersTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DCTCoordinateTransformersTests/GeodesyTests-Info.plist";
+				PRODUCT_NAME = GeodesyTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -406,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "DCTCoordinateTransformers" */ = {
+		24948A0016F5DAE100479DDD /* Build configuration list for PBXProject "Geodesy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24948A1116F5DAE100479DDD /* Debug */,
@@ -415,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformers" */ = {
+		24948A1316F5DAE100479DDD /* Build configuration list for PBXNativeTarget "Geodesy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24948A1416F5DAE100479DDD /* Debug */,
@@ -424,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "DCTCoordinateTransformersTests" */ = {
+		24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "GeodesyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24948A2C16F5DB1E00479DDD /* Debug */,
