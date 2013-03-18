@@ -59,6 +59,8 @@
 	_northing = I + II*dLon2 + III*dLon4 + IIIA*dLon6;
 	_easting = E0 + IV*dLon + V*dLon3 + VI*dLon5;
 	
+	if (![self gridSquareLetters]) return nil;
+	
 	return self;
 }
 
