@@ -114,10 +114,13 @@
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures {
 	
 	if (numberOfFigures == 0) numberOfFigures = 10;
+	numberOfFigures = numberOfFigures/2;
 	
-	NSInteger easting = round((self.easting % 100000) / pow(10, 5 - numberOfFigures/2));
-	NSInteger northing = round((self.northing % 100000) / pow(10, 5 - numberOfFigures/2));
-	return [NSString stringWithFormat:@"%@ %@ %@", self.gridSquareLetters, @(easting), @(northing)];
+	NSInteger easting = round((self.easting % 100000) / pow(10, 5 - numberOfFigures));
+	NSInteger northing = round((self.northing % 100000) / pow(10, 5 - numberOfFigures));
+	
+	NSString *format = [NSString stringWithFormat:@"%%@ %%0%id %%0%id", numberOfFigures, numberOfFigures];
+	return [NSString stringWithFormat:format, self.gridSquareLetters, easting, northing];
 }
 
 - (NSString *)gridSquareLetters {
