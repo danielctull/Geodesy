@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "GDYCoordinateSystem.h"
-#import "GDYCoordinate.h"
+#import "Geodesy.h"
 
 @implementation GDYCoordinateSystem
 
@@ -46,8 +45,8 @@
 	
 	// -- 1: convert polar to cartesian coordinates (using ellipse 1)
 	
-	double lat = [self degreesToRadians:coordinate.latitude];
-	double lon = [self degreesToRadians:coordinate.longitude];
+	double lat = [Geodesy convertDegreesToRadians:coordinate.latitude];
+	double lon = [Geodesy convertDegreesToRadians:coordinate.longitude];
 	
 	GDYEllipsoid *e1 = coordinate.coordinateSystem.ellipsoid;
 	GDYEllipsoid *e2 = newSystem.ellipsoid;
@@ -71,9 +70,9 @@
 	// -- 2: apply helmert transform using appropriate params
 	
 	double tx = datumTransform.transformX, ty = datumTransform.transformY, tz = datumTransform.transformZ;
-	double rx = [self degreesToRadians:(datumTransform.rotateX/3600)];  // normalise seconds to radians
-	double ry = [self degreesToRadians:(datumTransform.rotateY/3600)];
-	double rz = [self degreesToRadians:(datumTransform.rotateZ/3600)];
+	double rx = [Geodesy convertDegreesToRadians:(datumTransform.rotateX/3600)];  // normalise seconds to radians
+	double ry = [Geodesy convertDegreesToRadians:(datumTransform.rotateY/3600)];
+	double rz = [Geodesy convertDegreesToRadians:(datumTransform.rotateZ/3600)];
 	double s1 = datumTransform.scale/1e6 + 1;          // normalise ppm to (s+1)
 	
 	// apply transform
@@ -98,21 +97,12 @@
 	double lambda = atan2(y2, x2);
 	H = p/cos(phi) - nu;
 	
-	double latitude = [self radiansToDegrees:phi];
-	double longitude = [self radiansToDegrees:lambda];
+	double latitude = [Geodesy convertRadiansToDegrees:phi];
+	double longitude = [Geodesy convertRadiansToDegrees:lambda];
 	return [[GDYCoordinate alloc] initWithLatitude:latitude
 										 longitude:longitude
 								  coordinateSystem:newSystem];
 	
 }
-
-- (double)radiansToDegrees:(double)radians {
-	return radians * 180.0 / M_PI;
-}
-
-- (double)degreesToRadians:(double)degrees {
-	return degrees / 180.0f * M_PI;
-}
-
 
 @end

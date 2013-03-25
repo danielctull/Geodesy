@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "GDYOSGridReference.h"
+#import "Geodesy.h"
 
 @implementation GDYOSGridReference
 
@@ -208,8 +208,8 @@
 	lat = lat - VII*dE2 + VIII*dE4 - IX*dE6;
 	double lon = lon0 + X*dE - XI*dE3 + XII*dE5 - XIIA*dE7;
 	
-	double latitude = [self radiansToDegrees:lat];
-	double longitude = [self radiansToDegrees:lon];
+	double latitude = [Geodesy convertRadiansToDegrees:lat];
+	double longitude = [Geodesy convertRadiansToDegrees:lon];
 	GDYCoordinateSystem *system = [GDYCoordinateSystem OSGB36CoordinateSystem];
 	return [[GDYCoordinate alloc] initWithLatitude:latitude longitude:longitude coordinateSystem:system];
 }

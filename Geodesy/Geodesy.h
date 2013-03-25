@@ -9,3 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GDYOSGridReference.h"
 #import "GDYCoordinate.h"
+
+@interface Geodesy : NSObject
++ (double)convertRadiansToDegrees:(double)radians;
++ (double)convertDegreesToRadians:(double)degrees;
+@end

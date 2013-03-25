@@ -29,6 +29,7 @@
 		24948A6416F7105E00479DDD /* GDYEllipsoid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A5716F64CE000479DDD /* GDYEllipsoid.h */; };
 		24948A6516F7105E00479DDD /* GDYDatum.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A5A16F6666F00479DDD /* GDYDatum.h */; };
 		24948A6616F7105E00479DDD /* GDYCoordinateSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */; };
+		24B30E881700668B00221FFF /* Geodesy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B30E871700668B00221FFF /* Geodesy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +78,7 @@
 		24948A5B16F6667000479DDD /* GDYDatum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYDatum.m; sourceTree = "<group>"; };
 		24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateSystem.h; sourceTree = "<group>"; };
 		24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateSystem.m; sourceTree = "<group>"; };
+		24B30E871700668B00221FFF /* Geodesy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geodesy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				24948A0D16F5DAE100479DDD /* Geodesy.h */,
+				24B30E871700668B00221FFF /* Geodesy.m */,
 				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
 				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
 				24948A3716F5DC7700479DDD /* GDYCoordinate.h */,
@@ -269,6 +272,7 @@
 				24948A5916F64CE000479DDD /* GDYEllipsoid.m in Sources */,
 				24948A5C16F6667000479DDD /* GDYDatum.m in Sources */,
 				24948A6216F6FFF500479DDD /* GDYCoordinateSystem.m in Sources */,
+				24B30E881700668B00221FFF /* Geodesy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
