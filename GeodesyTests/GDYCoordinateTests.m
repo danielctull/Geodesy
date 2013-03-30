@@ -19,8 +19,8 @@
 	double bearing = floor([fromCoordinate initialHeadingToCoordinate:toCoordinate]*10000)/10000;
 	STAssertTrue(bearing == expectedBearing, @"%@ should be %@", @(bearing), @(expectedBearing));
 
-	double expectedDistance = 297000;
-	double distance = floor([fromCoordinate distanceToCoordinate:toCoordinate]/1000);
+	double expectedDistance = 297; // in km
+	double distance = floor([fromCoordinate distanceToCoordinate:toCoordinate]/1000); // returns metres
 	STAssertTrue(distance == expectedDistance, @"%@ should be %@", @(distance), @(expectedDistance));
 	
 }
