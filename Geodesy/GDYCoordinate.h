@@ -26,4 +26,7 @@
 
 - (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
 
+- (double)initialHeadingToCoordinate:(GDYCoordinate *)coordinate;
+- (double)distanceToCoordinate:(GDYCoordinate *)coordinate;
+
 @end

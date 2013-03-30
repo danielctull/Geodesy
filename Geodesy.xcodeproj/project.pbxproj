@@ -30,6 +30,7 @@
 		24948A6516F7105E00479DDD /* GDYDatum.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A5A16F6666F00479DDD /* GDYDatum.h */; };
 		24948A6616F7105E00479DDD /* GDYCoordinateSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */; };
 		24B30E881700668B00221FFF /* Geodesy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B30E871700668B00221FFF /* Geodesy.m */; };
+		24B512F1170725F5009822CD /* GDYCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B512F0170725F5009822CD /* GDYCoordinateTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +80,8 @@
 		24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateSystem.h; sourceTree = "<group>"; };
 		24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateSystem.m; sourceTree = "<group>"; };
 		24B30E871700668B00221FFF /* Geodesy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geodesy.m; sourceTree = "<group>"; };
+		24B512EF170725F5009822CD /* GDYCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateTests.h; sourceTree = "<group>"; };
+		24B512F0170725F5009822CD /* GDYCoordinateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */,
 				24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */,
 				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
+				24B512EF170725F5009822CD /* GDYCoordinateTests.h */,
+				24B512F0170725F5009822CD /* GDYCoordinateTests.m */,
 			);
 			path = GeodesyTests;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */,
 				24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */,
 				24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */,
+				24B512F1170725F5009822CD /* GDYCoordinateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "GDYCoordinate.h"
+#import "Geodesy.h"
 
 @implementation GDYCoordinate
 
@@ -28,6 +29,22 @@
 
 - (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem {
 	return [self.coordinateSystem convertCoordinate:self toSystem:coordinateSystem];
+}
+
+// http://www.movable-type.co.uk/scripts/latlong.html
+- (double)initialHeadingToCoordinate:(GDYCoordinate *)coordinate {
+	double fromLatitude = [Geodesy convertDegreesToRadians:self.latitude];
+	double fromLongitude = [Geodesy convertDegreesToRadians:self.longitude];
+	double toLatitude = [Geodesy convertDegreesToRadians:coordinate.latitude];
+	double toLongitude = [Geodesy convertDegreesToRadians:coordinate.longitude];
+	double dLongitude = toLongitude - fromLongitude;
+	double y = sin(dLongitude) * cos(toLatitude);
+	double x = cos(fromLatitude) * sin(toLatitude) - sin(fromLatitude) * cos(toLatitude) * cos(dLongitude);
+	return [Geodesy convertRadiansToDegrees:atan2(y, x)];
+}
+
+- (double)distanceToCoordinate:(GDYCoordinate *)coordinate {
+
 }
 
 @end
