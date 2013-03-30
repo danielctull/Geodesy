@@ -33,10 +33,15 @@
 
 // http://www.movable-type.co.uk/scripts/latlong.html
 - (double)initialHeadingToCoordinate:(GDYCoordinate *)coordinate {
-	double fromLatitude = [Geodesy convertDegreesToRadians:self.latitude];
-	double fromLongitude = [Geodesy convertDegreesToRadians:self.longitude];
-	double toLatitude = [Geodesy convertDegreesToRadians:coordinate.latitude];
-	double toLongitude = [Geodesy convertDegreesToRadians:coordinate.longitude];
+
+	GDYCoordinateSystem *WGS84CoordinateSystem = [GDYCoordinateSystem WGS84CoordinateSystem];
+	GDYCoordinate *fromCoordinate = [self convertToCoordinateSystem:WGS84CoordinateSystem];
+	GDYCoordinate *toCoordinate = [coordinate convertToCoordinateSystem:WGS84CoordinateSystem];
+
+	double fromLatitude = [Geodesy convertDegreesToRadians:fromCoordinate.latitude];
+	double fromLongitude = [Geodesy convertDegreesToRadians:fromCoordinate.longitude];
+	double toLatitude = [Geodesy convertDegreesToRadians:toCoordinate.latitude];
+	double toLongitude = [Geodesy convertDegreesToRadians:toCoordinate.longitude];
 	double dLongitude = toLongitude - fromLongitude;
 
 	double y = sin(dLongitude) * cos(toLatitude);
@@ -45,11 +50,16 @@
 }
 
 - (double)distanceToCoordinate:(GDYCoordinate *)coordinate {
+
+	GDYCoordinateSystem *WGS84CoordinateSystem = [GDYCoordinateSystem WGS84CoordinateSystem];
+	GDYCoordinate *fromCoordinate = [self convertToCoordinateSystem:WGS84CoordinateSystem];
+	GDYCoordinate *toCoordinate = [coordinate convertToCoordinateSystem:WGS84CoordinateSystem];
+
 	double r = 6371000; // Radius of Earth in meters
-	double fromLatitude = [Geodesy convertDegreesToRadians:self.latitude];
-	double fromLongitude = [Geodesy convertDegreesToRadians:self.longitude];
-	double toLatitude = [Geodesy convertDegreesToRadians:coordinate.latitude];
-	double toLongitude = [Geodesy convertDegreesToRadians:coordinate.longitude];
+	double fromLatitude = [Geodesy convertDegreesToRadians:fromCoordinate.latitude];
+	double fromLongitude = [Geodesy convertDegreesToRadians:fromCoordinate.longitude];
+	double toLatitude = [Geodesy convertDegreesToRadians:toCoordinate.latitude];
+	double toLongitude = [Geodesy convertDegreesToRadians:toCoordinate.longitude];
 	double dLongitude = toLongitude - fromLongitude;
 	double dLatitude =  toLatitude - fromLatitude;
 
