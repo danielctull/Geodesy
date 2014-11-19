@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7AA0906D-C774-4912-91AF-AFF6062BEFFE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Geodesy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>22BC3674586665FC44676534524F11A157696768</key>
+		<string>git://github.com/danielctull/Geodesy.git</string>
+		<key>5F26F8CED47C2499519887EF3DD7DCAE99EEC49F</key>
+		<string>bitbucket.org:danielctull/coordination.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Geodesy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>22BC3674586665FC44676534524F11A157696768</key>
+		<string>../..</string>
+		<key>5F26F8CED47C2499519887EF3DD7DCAE99EEC49F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>git://github.com/danielctull/Geodesy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>22BC3674586665FC44676534524F11A157696768</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5F26F8CED47C2499519887EF3DD7DCAE99EEC49F</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>22BC3674586665FC44676534524F11A157696768</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Geodesy</string>
+		</dict>
+	</array>
+</dict>
+</plist>

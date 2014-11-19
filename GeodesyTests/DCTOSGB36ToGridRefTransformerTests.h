@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface DCTOSGB36ToGridRefTransformerTests : SenTestCase
+@interface DCTOSGB36ToGridRefTransformerTests : XCTestCase
 
 @end

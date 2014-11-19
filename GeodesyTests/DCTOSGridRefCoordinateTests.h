@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface DCTOSGridRefCoordinateTests : SenTestCase
+@interface DCTOSGridRefCoordinateTests : XCTestCase
 
 @end

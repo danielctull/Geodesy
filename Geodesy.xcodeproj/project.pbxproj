@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		24948A0916F5DAE100479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
 		24948A0E16F5DAE100479DDD /* Geodesy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* Geodesy.h */; };
-		24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */; };
 		24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A1E16F5DB1E00479DDD /* UIKit.framework */; };
 		24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24948A0816F5DAE100479DDD /* Foundation.framework */; };
 		24948A2616F5DB1E00479DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24948A2416F5DB1E00479DDD /* InfoPlist.strings */; };
@@ -56,8 +55,7 @@
 		24948A0516F5DAE100479DDD /* libGeodesy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGeodesy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A0816F5DAE100479DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
-		24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeodesyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		24948A1B16F5DB1E00479DDD /* GeodesyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeodesyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A1E16F5DB1E00479DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24948A2316F5DB1E00479DDD /* GeodesyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeodesyTests-Info.plist"; sourceTree = "<group>"; };
 		24948A2516F5DB1E00479DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24948A4116F5E36100479DDD /* libGeodesy.a in Frameworks */,
-				24948A1D16F5DB1E00479DDD /* SenTestingKit.framework in Frameworks */,
 				24948A1F16F5DB1E00479DDD /* UIKit.framework in Frameworks */,
 				24948A2016F5DB1E00479DDD /* Foundation.framework in Frameworks */,
 			);
@@ -121,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				24948A0516F5DAE100479DDD /* libGeodesy.a */,
-				24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */,
+				24948A1B16F5DB1E00479DDD /* GeodesyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				24948A0816F5DAE100479DDD /* Foundation.framework */,
-				24948A1C16F5DB1E00479DDD /* SenTestingKit.framework */,
 				24948A1E16F5DB1E00479DDD /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -209,8 +205,8 @@
 			);
 			name = GeodesyTests;
 			productName = DCTCoordinateTransformersTests;
-			productReference = 24948A1B16F5DB1E00479DDD /* GeodesyTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 24948A1B16F5DB1E00479DDD /* GeodesyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -385,11 +381,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "GeodesyTests/GeodesyTests-Info.plist";
 				PRODUCT_NAME = GeodesyTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -399,11 +395,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "GeodesyTests/GeodesyTests-Info.plist";
 				PRODUCT_NAME = GeodesyTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

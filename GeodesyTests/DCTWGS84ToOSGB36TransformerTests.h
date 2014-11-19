@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface DCTWGS84ToOSGB36TransformerTests : SenTestCase
+@interface DCTWGS84ToOSGB36TransformerTests : XCTestCase
 
 @end
