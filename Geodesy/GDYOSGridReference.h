@@ -11,8 +11,8 @@
 
 @interface GDYOSGridReference : NSObject
 
-- (id)initWithGridReference:(NSString *)gridReference;
-- (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;
+- (instancetype)initWithGridReference:(NSString *)gridReference;
+- (instancetype)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;
 
 @property (readonly) NSString *gridSquareLetters;
 @property (nonatomic, readonly) NSInteger easting;
@@ -20,7 +20,7 @@
 
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures;
 
-- (id)initWithCoordinate:(GDYCoordinate *)coordinate;
+- (instancetype)initWithCoordinate:(GDYCoordinate *)coordinate;
 - (GDYCoordinate *)convertToCoordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
 
 @end

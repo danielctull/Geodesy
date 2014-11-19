@@ -10,7 +10,7 @@
 
 @implementation GDYDatum
 
-- (id)initWithType:(GDYDatumType)type {
+- (instancetype)initWithType:(GDYDatumType)type {
 	self = [self init];
 	if (!self) return nil;
 	_type = type;

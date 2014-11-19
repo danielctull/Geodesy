@@ -10,7 +10,7 @@
 
 @implementation GDYCoordinateSystem
 
-- (id)initWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid {
+- (instancetype)initWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid {
 	self = [self init];
 	if (!self) return nil;
 	_datum = datum;

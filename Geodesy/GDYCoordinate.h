@@ -14,12 +14,12 @@
 
 /** Returns a coordinate in the WGS84 coordinate space.
  */
-- (id)initWithLatitude:(double)latitude longitude:(double)longitude;
+- (instancetype)initWithLatitude:(double)latitude longitude:(double)longitude;
 
 /** Returns a coordinate with the given datum and ellipsoid.
  
  */
-- (id)initWithLatitude:(double)latitude longitude:(double)longitude coordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
+- (instancetype)initWithLatitude:(double)latitude longitude:(double)longitude coordinateSystem:(GDYCoordinateSystem *)coordinateSystem;
 @property (nonatomic, readonly) double latitude;
 @property (nonatomic, readonly) double longitude;
 @property (nonatomic, readonly) GDYCoordinateSystem *coordinateSystem;

@@ -10,13 +10,13 @@
 
 @interface GDYHelmertDatumTransform : NSObject
 
-- (id)initWithTransformX:(double)transformX
-			  transformY:(double)transformY
-			  transformZ:(double)transformZ
-				 rotateX:(double)rotateX
-				 rotateY:(double)rotateY
-				 rotateZ:(double)rotateZ
-				   scale:(double)scale;
+- (instancetype)initWithTransformX:(double)transformX
+						transformY:(double)transformY
+						transformZ:(double)transformZ
+						   rotateX:(double)rotateX
+						   rotateY:(double)rotateY
+						   rotateZ:(double)rotateZ
+							 scale:(double)scale;
 
 @property (nonatomic, readonly) double transformX;
 @property (nonatomic, readonly) double transformY;

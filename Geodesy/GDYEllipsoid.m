@@ -30,7 +30,7 @@
 	return [[self alloc] initWithSemiMajorAxis:6378388.000 semiMinorAxis:6356911.946 inverseFlattening:1/297.0];
 }
 
-- (id)initWithSemiMajorAxis:(double)semiMajorAxis semiMinorAxis:(double)semiMinorAxis inverseFlattening:(double)inverseFlattening {
+- (instancetype)initWithSemiMajorAxis:(double)semiMajorAxis semiMinorAxis:(double)semiMinorAxis inverseFlattening:(double)inverseFlattening {
 	self = [self init];
 	if (!self) return nil;
 	_semiMajorAxis = semiMajorAxis;

@@ -10,7 +10,7 @@
 
 @implementation GDYOSGridReference
 
-- (id)initWithCoordinate:(GDYCoordinate *)coordinate {
+- (instancetype)initWithCoordinate:(GDYCoordinate *)coordinate {
 	self = [self init];
 	if (!self) return nil;
 	
@@ -64,7 +64,7 @@
 	return self;
 }
 
-- (id)initWithGridReference:(NSString *)gridReference {
+- (instancetype)initWithGridReference:(NSString *)gridReference {
 	
 	gridReference = [gridReference uppercaseString];
 	NSMutableCharacterSet *characterSet = [NSMutableCharacterSet uppercaseLetterCharacterSet];
@@ -105,7 +105,7 @@
 	return [self initWithEasting:[eastingString integerValue] northing:[northingString integerValue]];
 }
 
-- (id)initWithEasting:(NSInteger)easting northing:(NSInteger)northing {
+- (instancetype)initWithEasting:(NSInteger)easting northing:(NSInteger)northing {
 	self = [self init];
 	if (!self) return nil;
 	_easting = easting;

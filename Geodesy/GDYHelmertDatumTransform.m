@@ -34,13 +34,13 @@
 											  scale:-self.scale];
 }
 
-- (id)initWithTransformX:(double)transformX
-			  transformY:(double)transformY
-			  transformZ:(double)transformZ
-				 rotateX:(double)rotateX
-				 rotateY:(double)rotateY
-				 rotateZ:(double)rotateZ
-				   scale:(double)scale {
+- (instancetype)initWithTransformX:(double)transformX
+						transformY:(double)transformY
+						transformZ:(double)transformZ
+						   rotateX:(double)rotateX
+						   rotateY:(double)rotateY
+						   rotateZ:(double)rotateZ
+							 scale:(double)scale {
 	self = [self init];
 	if (!self) return nil;
 	_transformX = transformX;

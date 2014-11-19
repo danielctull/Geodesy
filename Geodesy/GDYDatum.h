@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, GDYDatumType) {
 
 @interface GDYDatum : NSObject
 
-- (id)initWithType:(GDYDatumType)type;
+- (instancetype)initWithType:(GDYDatumType)type;
 @property (nonatomic, readonly) GDYDatumType type;
 
 - (GDYHelmertDatumTransform *)transformToWGS84;

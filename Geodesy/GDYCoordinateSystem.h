@@ -13,7 +13,7 @@
 
 @interface GDYCoordinateSystem : NSObject
 
-- (id)initWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid;
+- (instancetype)initWithDatum:(GDYDatum *)datum ellipsoid:(GDYEllipsoid *)ellipsoid;
 @property (nonatomic, readonly) GDYDatum *datum;
 @property (nonatomic, readonly) GDYEllipsoid *ellipsoid;
 
