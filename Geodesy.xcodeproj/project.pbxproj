@@ -63,11 +63,8 @@
 		24948A3216F5DC2700479DDD /* GDYOSGridReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYOSGridReference.m; sourceTree = "<group>"; };
 		24948A3716F5DC7700479DDD /* GDYCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinate.h; sourceTree = "<group>"; };
 		24948A3816F5DC7700479DDD /* GDYCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinate.m; sourceTree = "<group>"; };
-		24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGridRefCoordinateTests.h; sourceTree = "<group>"; };
 		24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGridRefCoordinateTests.m; sourceTree = "<group>"; };
-		24948A4516F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTOSGB36ToGridRefTransformerTests.h; sourceTree = "<group>"; };
 		24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTOSGB36ToGridRefTransformerTests.m; sourceTree = "<group>"; };
-		24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTWGS84ToOSGB36TransformerTests.h; sourceTree = "<group>"; };
 		24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTWGS84ToOSGB36TransformerTests.m; sourceTree = "<group>"; };
 		24948A5116F61E6A00479DDD /* GDYHelmertDatumTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYHelmertDatumTransform.h; sourceTree = "<group>"; };
 		24948A5216F61E6B00479DDD /* GDYHelmertDatumTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYHelmertDatumTransform.m; sourceTree = "<group>"; };
@@ -78,7 +75,6 @@
 		24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateSystem.h; sourceTree = "<group>"; };
 		24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateSystem.m; sourceTree = "<group>"; };
 		24B30E871700668B00221FFF /* Geodesy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geodesy.m; sourceTree = "<group>"; };
-		24B512EF170725F5009822CD /* GDYCoordinateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYCoordinateTests.h; sourceTree = "<group>"; };
 		24B512F0170725F5009822CD /* GDYCoordinateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDYCoordinateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,13 +154,9 @@
 			children = (
 				24948A2316F5DB1E00479DDD /* GeodesyTests-Info.plist */,
 				24948A2416F5DB1E00479DDD /* InfoPlist.strings */,
-				24948A3A16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.h */,
 				24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */,
-				24948A4516F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.h */,
 				24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */,
-				24948A4B16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.h */,
 				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
-				24B512EF170725F5009822CD /* GDYCoordinateTests.h */,
 				24B512F0170725F5009822CD /* GDYCoordinateTests.m */,
 			);
 			path = GeodesyTests;

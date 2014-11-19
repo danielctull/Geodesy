@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTOSGB36ToGridRefTransformerTests.h"
+#import <XCTest/XCTest.h>
 #import <Geodesy/Geodesy.h>
+
+@interface DCTOSGB36ToGridRefTransformerTests : XCTestCase
+@end
 
 @implementation DCTOSGB36ToGridRefTransformerTests
 

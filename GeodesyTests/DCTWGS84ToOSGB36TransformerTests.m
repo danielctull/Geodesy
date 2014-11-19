@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTWGS84ToOSGB36TransformerTests.h"
+#import <XCTest/XCTest.h>
 #import <Geodesy/Geodesy.h>
+
+@interface DCTWGS84ToOSGB36TransformerTests : XCTestCase
+@end
 
 @implementation DCTWGS84ToOSGB36TransformerTests
 

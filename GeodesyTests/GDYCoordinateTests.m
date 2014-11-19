@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "GDYCoordinateTests.h"
+#import <XCTest/XCTest.h>
 #import <Geodesy/Geodesy.h>
+
+@interface GDYCoordinateTests : XCTestCase
+@end
+
 
 @implementation GDYCoordinateTests
 
