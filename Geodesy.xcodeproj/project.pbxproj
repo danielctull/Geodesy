@@ -306,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24B72ED81A1C92F700AFFA45 /* Debug.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -382,6 +383,7 @@
 				24B72F091A1CA83600AFFA45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
