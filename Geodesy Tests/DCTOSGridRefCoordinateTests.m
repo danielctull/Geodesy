@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <Geodesy/Geodesy.h>
+@import XCTest;
+@import Geodesy;
 
 @interface DCTOSGridRefCoordinateTests : XCTestCase
 @end
