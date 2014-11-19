@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24B72EF31A1CA83600AFFA45"
                BuildableName = "Geodesy.framework"
-               BlueprintName = "Geodesy"
+               BlueprintName = "Geodesy iOS"
                ReferencedContainer = "container:Geodesy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B72EF31A1CA83600AFFA45"
             BuildableName = "Geodesy.framework"
-            BlueprintName = "Geodesy"
+            BlueprintName = "Geodesy iOS"
             ReferencedContainer = "container:Geodesy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B72EF31A1CA83600AFFA45"
             BuildableName = "Geodesy.framework"
-            BlueprintName = "Geodesy"
+            BlueprintName = "Geodesy iOS"
             ReferencedContainer = "container:Geodesy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B72EF31A1CA83600AFFA45"
             BuildableName = "Geodesy.framework"
-            BlueprintName = "Geodesy"
+            BlueprintName = "Geodesy iOS"
             ReferencedContainer = "container:Geodesy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

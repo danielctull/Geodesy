@@ -190,9 +190,9 @@
 			productReference = 24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		24B72EF31A1CA83600AFFA45 /* Geodesy */ = {
+		24B72EF31A1CA83600AFFA45 /* Geodesy iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24B72F071A1CA83600AFFA45 /* Build configuration list for PBXNativeTarget "Geodesy" */;
+			buildConfigurationList = 24B72F071A1CA83600AFFA45 /* Build configuration list for PBXNativeTarget "Geodesy iOS" */;
 			buildPhases = (
 				24B72EEF1A1CA83600AFFA45 /* Sources */,
 				24B72EF01A1CA83600AFFA45 /* Frameworks */,
@@ -203,7 +203,7 @@
 			);
 			dependencies = (
 			);
-			name = Geodesy;
+			name = "Geodesy iOS";
 			productName = "Geodesy iOS Framework";
 			productReference = 24B72EF41A1CA83600AFFA45 /* Geodesy.framework */;
 			productType = "com.apple.product-type.framework";
@@ -234,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24B72EF31A1CA83600AFFA45 /* Geodesy */,
+				24B72EF31A1CA83600AFFA45 /* Geodesy iOS */,
 				24948A1A16F5DB1E00479DDD /* Geodesy Tests */,
 			);
 		};
@@ -375,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24B72F071A1CA83600AFFA45 /* Build configuration list for PBXNativeTarget "Geodesy" */ = {
+		24B72F071A1CA83600AFFA45 /* Build configuration list for PBXNativeTarget "Geodesy iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24B72F081A1CA83600AFFA45 /* Debug */,
