@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+@import Foundation;
+@import CoreLocation;
 #import "GDYCoordinateSystem.h"
 
 @interface GDYCoordinate : NSObject

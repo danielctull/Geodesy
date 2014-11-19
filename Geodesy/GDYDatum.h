@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "GDYHelmertDatumTransform.h"
 
 typedef NS_ENUM(NSInteger, GDYDatumType) {

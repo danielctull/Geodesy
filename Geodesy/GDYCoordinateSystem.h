@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "GDYDatum.h"
 #import "GDYEllipsoid.h"
 @class GDYCoordinate;
