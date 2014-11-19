@@ -14,7 +14,7 @@
 - (instancetype)initWithGridReference:(NSString *)gridReference;
 - (instancetype)initWithEasting:(NSInteger)easting northing:(NSInteger)northing;
 
-@property (readonly) NSString *gridSquareLetters;
+@property (nonatomic, readonly) NSString *gridSquareLetters;
 @property (nonatomic, readonly) NSInteger easting;
 @property (nonatomic, readonly) NSInteger northing;
 
