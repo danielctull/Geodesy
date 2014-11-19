@@ -18,6 +18,8 @@
 @property (nonatomic, readonly) NSInteger easting;
 @property (nonatomic, readonly) NSInteger northing;
 
+- (NSString *)northingWithNumberOfFigures:(NSInteger)numberOfFigures;
+- (NSString *)eastingWithNumberOfFigures:(NSInteger)numberOfFigures;
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures;
 
 - (instancetype)initWithCoordinate:(GDYCoordinate *)coordinate;

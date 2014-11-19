@@ -113,19 +113,34 @@
 	return self;
 }
 
+- (NSString *)formatGridValue:(NSInteger)value withNumberOfFigures:(NSInteger)numberOfFigures {
+
+	if (numberOfFigures == 0) numberOfFigures = 5;
+
+	NSInteger rounded = round((value % 100000) / pow(10, 5 - numberOfFigures));
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wformat-nonliteral"
+	NSString *format = [NSString stringWithFormat:@"%%0%lid", (long)numberOfFigures];
+	return [NSString stringWithFormat:format, rounded];
+#pragma clang diagnostic pop
+}
+
+- (NSString *)northingWithNumberOfFigures:(NSInteger)numberOfFigures {
+	return [self formatGridValue:self.northing withNumberOfFigures:numberOfFigures];
+}
+
+- (NSString *)eastingWithNumberOfFigures:(NSInteger)numberOfFigures {
+	return [self formatGridValue:self.easting withNumberOfFigures:numberOfFigures];
+}
+
 - (NSString *)gridReferenceWithNumberOfFigures:(NSInteger)numberOfFigures {
 	
 	if (numberOfFigures == 0) numberOfFigures = 10;
 	numberOfFigures = numberOfFigures/2;
-	
-	NSInteger easting = round((self.easting % 100000) / pow(10, 5 - numberOfFigures));
-	NSInteger northing = round((self.northing % 100000) / pow(10, 5 - numberOfFigures));
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wformat-nonliteral"
-	NSString *format = [NSString stringWithFormat:@"%%@ %%0%lid %%0%lid", (long)numberOfFigures, (long)numberOfFigures];
-	return [NSString stringWithFormat:format, self.gridSquareLetters, easting, northing];
-#pragma clang diagnostic pop
+	NSString *easting = [self eastingWithNumberOfFigures:numberOfFigures];
+	NSString *northing = [self northingWithNumberOfFigures:numberOfFigures];
+	return [NSString stringWithFormat:@"%@ %@ %@", self.gridSquareLetters, easting, northing];
 }
 
 - (NSString *)gridSquareLetters {
