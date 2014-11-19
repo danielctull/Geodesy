@@ -120,8 +120,8 @@
 	
 	NSInteger easting = round((self.easting % 100000) / pow(10, 5 - numberOfFigures));
 	NSInteger northing = round((self.northing % 100000) / pow(10, 5 - numberOfFigures));
-	
-	NSString *format = [NSString stringWithFormat:@"%%@ %%0%id %%0%id", numberOfFigures, numberOfFigures];
+
+	NSString *format = [NSString stringWithFormat:@"%%@ %%0%lid %%0%lid", (long)numberOfFigures, (long)numberOfFigures];
 	return [NSString stringWithFormat:format, self.gridSquareLetters, easting, northing];
 }
 
