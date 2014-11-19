@@ -19,12 +19,12 @@
 	GDYCoordinate *toCoordinate = [[GDYCoordinate alloc] initWithLatitude:51.339802 longitude:12.403340];
 
 	double expectedBearing = 67.9875;
-	double bearing = floor([fromCoordinate initialHeadingToCoordinate:toCoordinate]*10000)/10000;
-	XCTAssertTrue(bearing == expectedBearing, @"%@ should be %@", @(bearing), @(expectedBearing));
+	double bearing = [fromCoordinate initialHeadingToCoordinate:toCoordinate];
+	XCTAssertEqualWithAccuracy(bearing, expectedBearing, 0.0001, @"%@ should be %@", @(bearing), @(expectedBearing));
 
 	double expectedDistance = 297; // in km
-	double distance = floor([fromCoordinate distanceToCoordinate:toCoordinate]/1000); // returns metres
-	XCTAssertTrue(distance == expectedDistance, @"%@ should be %@", @(distance), @(expectedDistance));
+	double distance = [fromCoordinate distanceToCoordinate:toCoordinate]/1000; // returns metres
+	XCTAssertEqualWithAccuracy(distance, expectedDistance, 0.1, @"%@ should be %@", @(distance), @(expectedDistance));
 	
 }
 
