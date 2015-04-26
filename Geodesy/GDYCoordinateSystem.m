@@ -89,7 +89,7 @@
 	eSq = (a*a - b*b) / (a*a);
 	double p = sqrt(x2*x2 + y2*y2);
 	double phi = atan2(z2, p*(1-eSq)), phiP = 2*M_PI;
-	while (abs(phi-phiP) > precision) {
+	while (fabs(phi-phiP) > precision) {
 		nu = a / sqrt(1 - eSq*sin(phi)*sin(phi));
 		phiP = phi;
 		phi = atan2(z2 + eSq*nu*sin(phi), p);
