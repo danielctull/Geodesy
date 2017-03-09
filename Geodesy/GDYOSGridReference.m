@@ -237,7 +237,7 @@
 }
 
 - (double)degreesToRadians:(double)degrees {
-	return degrees / 180.0f * M_PI;
+	return degrees / 180.0 * M_PI;
 }
 
 @end
