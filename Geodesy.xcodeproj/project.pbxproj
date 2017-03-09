@@ -26,6 +26,20 @@
 		24B72F1A1A1CA8DC00AFFA45 /* GDYDatum.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A5A16F6666F00479DDD /* GDYDatum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24B72F1B1A1CA8DC00AFFA45 /* GDYCoordinateSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24B72F241A1CD66E00AFFA45 /* Geodesy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B72EF41A1CA83600AFFA45 /* Geodesy.framework */; };
+		24F6015F1E71686200EC00D2 /* Geodesy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B30E871700668B00221FFF /* Geodesy.m */; };
+		24F601601E71686200EC00D2 /* GDYOSGridReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3216F5DC2700479DDD /* GDYOSGridReference.m */; };
+		24F601611E71686200EC00D2 /* GDYCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3816F5DC7700479DDD /* GDYCoordinate.m */; };
+		24F601621E71686200EC00D2 /* GDYHelmertDatumTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5216F61E6B00479DDD /* GDYHelmertDatumTransform.m */; };
+		24F601631E71686200EC00D2 /* GDYEllipsoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5816F64CE000479DDD /* GDYEllipsoid.m */; };
+		24F601641E71686200EC00D2 /* GDYDatum.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A5B16F6667000479DDD /* GDYDatum.m */; };
+		24F601651E71686200EC00D2 /* GDYCoordinateSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A6116F6FFF400479DDD /* GDYCoordinateSystem.m */; };
+		24F601681E71686200EC00D2 /* Geodesy.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A0D16F5DAE100479DDD /* Geodesy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F601691E71686200EC00D2 /* GDYOSGridReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A3116F5DC2700479DDD /* GDYOSGridReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F6016A1E71686200EC00D2 /* GDYCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A3716F5DC7700479DDD /* GDYCoordinate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F6016B1E71686200EC00D2 /* GDYHelmertDatumTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A5116F61E6A00479DDD /* GDYHelmertDatumTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F6016C1E71686200EC00D2 /* GDYEllipsoid.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A5716F64CE000479DDD /* GDYEllipsoid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F6016D1E71686200EC00D2 /* GDYDatum.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A5A16F6666F00479DDD /* GDYDatum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F6016E1E71686200EC00D2 /* GDYCoordinateSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +91,7 @@
 		24F6015A1E7167FC00EC00D2 /* watchOS Extension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS Extension.xcconfig"; sourceTree = "<group>"; };
 		24F6015B1E7167FC00EC00D2 /* watchOS Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS Framework.xcconfig"; sourceTree = "<group>"; };
 		24F6015C1E7167FC00EC00D2 /* watchOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = watchOS.xcconfig; sourceTree = "<group>"; };
+		24F601731E71686200EC00D2 /* Geodesy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Geodesy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		24B72EF01A1CA83600AFFA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F601661E71686200EC00D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -113,6 +135,7 @@
 			children = (
 				24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */,
 				24B72EF41A1CA83600AFFA45 /* Geodesy.framework */,
+				24F601731E71686200EC00D2 /* Geodesy.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +256,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24F601671E71686200EC00D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F601681E71686200EC00D2 /* Geodesy.h in Headers */,
+				24F601691E71686200EC00D2 /* GDYOSGridReference.h in Headers */,
+				24F6016A1E71686200EC00D2 /* GDYCoordinate.h in Headers */,
+				24F6016B1E71686200EC00D2 /* GDYHelmertDatumTransform.h in Headers */,
+				24F6016C1E71686200EC00D2 /* GDYEllipsoid.h in Headers */,
+				24F6016D1E71686200EC00D2 /* GDYDatum.h in Headers */,
+				24F6016E1E71686200EC00D2 /* GDYCoordinateSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +309,24 @@
 			productReference = 24B72EF41A1CA83600AFFA45 /* Geodesy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		24F6015D1E71686200EC00D2 /* Geodesy watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F601701E71686200EC00D2 /* Build configuration list for PBXNativeTarget "Geodesy watchOS" */;
+			buildPhases = (
+				24F6015E1E71686200EC00D2 /* Sources */,
+				24F601661E71686200EC00D2 /* Frameworks */,
+				24F601671E71686200EC00D2 /* Headers */,
+				24F6016F1E71686200EC00D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Geodesy watchOS";
+			productName = "Geodesy iOS Framework";
+			productReference = 24F601731E71686200EC00D2 /* Geodesy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,6 +338,9 @@
 				TargetAttributes = {
 					24B72EF31A1CA83600AFFA45 = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					24F6015D1E71686200EC00D2 = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -299,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				24B72EF31A1CA83600AFFA45 /* Geodesy iOS */,
+				24F6015D1E71686200EC00D2 /* Geodesy watchOS */,
 				24948A1A16F5DB1E00479DDD /* Geodesy Tests */,
 			);
 		};
@@ -313,6 +372,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		24B72EF21A1CA83600AFFA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F6016F1E71686200EC00D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,6 +426,20 @@
 				24B72F121A1CA8C400AFFA45 /* GDYEllipsoid.m in Sources */,
 				24B72F131A1CA8C400AFFA45 /* GDYDatum.m in Sources */,
 				24B72F141A1CA8C400AFFA45 /* GDYCoordinateSystem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F6015E1E71686200EC00D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F6015F1E71686200EC00D2 /* Geodesy.m in Sources */,
+				24F601601E71686200EC00D2 /* GDYOSGridReference.m in Sources */,
+				24F601611E71686200EC00D2 /* GDYCoordinate.m in Sources */,
+				24F601621E71686200EC00D2 /* GDYHelmertDatumTransform.m in Sources */,
+				24F601631E71686200EC00D2 /* GDYEllipsoid.m in Sources */,
+				24F601641E71686200EC00D2 /* GDYDatum.m in Sources */,
+				24F601651E71686200EC00D2 /* GDYCoordinateSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +492,24 @@
 			};
 			name = Release;
 		};
+		24F601711E71686200EC00D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F6015B1E7167FC00EC00D2 /* watchOS Framework.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				PRODUCT_NAME = Geodesy;
+			};
+			name = Debug;
+		};
+		24F601721E71686200EC00D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F6015B1E7167FC00EC00D2 /* watchOS Framework.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				PRODUCT_NAME = Geodesy;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +536,15 @@
 			buildConfigurations = (
 				24B72F081A1CA83600AFFA45 /* Debug */,
 				24B72F091A1CA83600AFFA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24F601701E71686200EC00D2 /* Build configuration list for PBXNativeTarget "Geodesy watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F601711E71686200EC00D2 /* Debug */,
+				24F601721E71686200EC00D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
