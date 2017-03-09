@@ -336,10 +336,16 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Daniel Tull";
 				TargetAttributes = {
+					24948A1A16F5DB1E00479DDD = {
+						DevelopmentTeam = B2M757K4LG;
+					};
 					24B72EF31A1CA83600AFFA45 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = B2M757K4LG;
+						ProvisioningStyle = Automatic;
 					};
 					24F6015D1E71686200EC00D2 = {
+						DevelopmentTeam = B2M757K4LG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -450,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F601371E7167FC00EC00D2 /* Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B2M757K4LG;
 			};
 			name = Debug;
 		};
@@ -457,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F601491E7167FC00EC00D2 /* Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B2M757K4LG;
 			};
 			name = Release;
 		};
@@ -496,7 +504,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F6015B1E7167FC00EC00D2 /* watchOS Framework.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				PRODUCT_NAME = Geodesy;
 			};
 			name = Debug;
@@ -505,7 +512,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F6015B1E7167FC00EC00D2 /* watchOS Framework.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				PRODUCT_NAME = Geodesy;
 			};
 			name = Release;
