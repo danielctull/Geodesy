@@ -273,9 +273,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		24948A1A16F5DB1E00479DDD /* Geodesy Tests */ = {
+		24948A1A16F5DB1E00479DDD /* Geodesy Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "Geodesy Tests" */;
+			buildConfigurationList = 24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "Geodesy Tests iOS" */;
 			buildPhases = (
 				24948A1616F5DB1E00479DDD /* Sources */,
 				24948A1716F5DB1E00479DDD /* Frameworks */,
@@ -286,7 +286,7 @@
 			);
 			dependencies = (
 			);
-			name = "Geodesy Tests";
+			name = "Geodesy Tests iOS";
 			productName = DCTCoordinateTransformersTests;
 			productReference = 24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -358,7 +358,7 @@
 			targets = (
 				24B72EF31A1CA83600AFFA45 /* Geodesy iOS */,
 				24F6015D1E71686200EC00D2 /* Geodesy watchOS */,
-				24948A1A16F5DB1E00479DDD /* Geodesy Tests */,
+				24948A1A16F5DB1E00479DDD /* Geodesy Tests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "Geodesy Tests" */ = {
+		24948A2B16F5DB1E00479DDD /* Build configuration list for PBXNativeTarget "Geodesy Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24948A2C16F5DB1E00479DDD /* Debug */,
