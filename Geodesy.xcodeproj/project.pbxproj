@@ -42,6 +42,16 @@
 		24F6016E1E71686200EC00D2 /* GDYCoordinateSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 24948A6016F6FFF400479DDD /* GDYCoordinateSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		248C43271E9069C200E3405E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 249489FD16F5DAE100479DDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24B72EF31A1CA83600AFFA45;
+			remoteInfo = "Geodesy iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
 		24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geodesy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +295,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				248C43281E9069C200E3405E /* PBXTargetDependency */,
 			);
 			name = "Geodesy Tests iOS";
 			productName = DCTCoordinateTransformersTests;
@@ -450,6 +461,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		248C43281E9069C200E3405E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24B72EF31A1CA83600AFFA45 /* Geodesy iOS */;
+			targetProxy = 248C43271E9069C200E3405E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		24948A1116F5DAE100479DDD /* Debug */ = {
