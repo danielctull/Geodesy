@@ -83,7 +83,8 @@
 	
 	// -- 3: convert cartesian to polar coordinates (using ellipse 2)
 	
-	a = e2.semiMajorAxis, b = e2.semiMinorAxis;
+	a = e2.semiMajorAxis;
+	b = e2.semiMinorAxis;
 	double precision = 4 / a;  // results accurate to around 4 metres
 	
 	eSq = (a*a - b*b) / (a*a);
