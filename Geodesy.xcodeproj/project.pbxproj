@@ -13,6 +13,8 @@
 		240732531E92FD3400F3EA1D /* Ellipsoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732511E92FD3400F3EA1D /* Ellipsoid.swift */; };
 		240732551E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732541E92FEA900F3EA1D /* CoordinateSystem.swift */; };
 		240732561E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732541E92FEA900F3EA1D /* CoordinateSystem.swift */; };
+		240732581E92FFAD00F3EA1D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732571E92FFAD00F3EA1D /* Coordinate.swift */; };
+		240732591E92FFAD00F3EA1D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732571E92FFAD00F3EA1D /* Coordinate.swift */; };
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
@@ -62,6 +64,7 @@
 		2407324E1E92FC3B00F3EA1D /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
 		240732511E92FD3400F3EA1D /* Ellipsoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipsoid.swift; sourceTree = "<group>"; };
 		240732541E92FEA900F3EA1D /* CoordinateSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
+		240732571E92FFAD00F3EA1D /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
 		24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geodesy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A3116F5DC2700479DDD /* GDYOSGridReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYOSGridReference.h; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 				24B30E871700668B00221FFF /* Geodesy.m */,
 				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
 				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
+				240732571E92FFAD00F3EA1D /* Coordinate.swift */,
 				24948A3716F5DC7700479DDD /* GDYCoordinate.h */,
 				24948A3816F5DC7700479DDD /* GDYCoordinate.m */,
 				24948A5116F61E6A00479DDD /* GDYHelmertDatumTransform.h */,
@@ -438,6 +442,7 @@
 				240732551E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */,
 				24B72F0F1A1CA8C400AFFA45 /* GDYOSGridReference.m in Sources */,
 				240732521E92FD3400F3EA1D /* Ellipsoid.swift in Sources */,
+				240732581E92FFAD00F3EA1D /* Coordinate.swift in Sources */,
 				24B72F101A1CA8C400AFFA45 /* GDYCoordinate.m in Sources */,
 				24B72F111A1CA8C400AFFA45 /* GDYHelmertDatumTransform.m in Sources */,
 				24B72F121A1CA8C400AFFA45 /* GDYEllipsoid.m in Sources */,
@@ -455,6 +460,7 @@
 				240732561E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */,
 				24F601601E71686200EC00D2 /* GDYOSGridReference.m in Sources */,
 				240732531E92FD3400F3EA1D /* Ellipsoid.swift in Sources */,
+				240732591E92FFAD00F3EA1D /* Coordinate.swift in Sources */,
 				24F601611E71686200EC00D2 /* GDYCoordinate.m in Sources */,
 				24F601621E71686200EC00D2 /* GDYHelmertDatumTransform.m in Sources */,
 				24F601631E71686200EC00D2 /* GDYEllipsoid.m in Sources */,
