@@ -7,23 +7,23 @@ public struct Ellipsoid {
 
 extension Ellipsoid {
 
-	static var wgs84: Ellipsoid {
+	public static var wgs84: Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6378137, semiMinorAxis: 6356752.3142, inverseFlattening: 1/298.257223563)
 	}
 
-	static var grs80: Ellipsoid {
+	public static var grs80: Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6378137, semiMinorAxis: 6356752.314140, inverseFlattening: 1/298.257222101)
 	}
 
-	static var airy1830: Ellipsoid {
+	public static var airy1830: Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6377563.396, semiMinorAxis: 6356256.910, inverseFlattening: 1/299.3249646)
 	}
 
-	static var airyModified: Ellipsoid {
+	public static var airyModified: Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6377340.189, semiMinorAxis: 6356034.448, inverseFlattening: 1/299.32496)
 	}
 
-	static var intl1924: Ellipsoid {
+	public static var intl1924: Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6378388.000, semiMinorAxis: 6356911.946, inverseFlattening: 1/297.0)
 	}
 }
