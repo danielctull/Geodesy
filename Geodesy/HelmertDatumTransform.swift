@@ -1,13 +1,13 @@
 
 /// Transforms to apply to coordinates.
 public struct HelmertDatumTransform {
-	let transformX: Double
-	let transformY: Double
-	let transformZ: Double
-	let rotateX: Double
-	let rotateY: Double
-	let rotateZ: Double
-	let scale: Double
+	public let transformX: Double
+	public let transformY: Double
+	public let transformZ: Double
+	public let rotateX: Double
+	public let rotateY: Double
+	public let rotateZ: Double
+	public let scale: Double
 }
 
 
@@ -32,7 +32,18 @@ extension HelmertDatumTransform {
 /// https://en.wikipedia.org/wiki/Helmert_transformation#Standard_parameters
 extension HelmertDatumTransform {
 
-	public static var wgs84osgb36: HelmertDatumTransform {
+	fileprivate static var identity: HelmertDatumTransform {
+		return HelmertDatumTransform(
+			transformX: 0,
+			transformY: 0,
+			transformZ: 0,
+			rotateX: 0,
+			rotateY: 0,
+			rotateZ: 0,
+			scale: 1)
+	}
+
+	fileprivate static var wgs84osgb36: HelmertDatumTransform {
 		return HelmertDatumTransform(
 			transformX: -446.448,
 			transformY: 125.157,
@@ -43,7 +54,25 @@ extension HelmertDatumTransform {
 			scale: 20.4894)
 	}
 
-	public static var osgb36wgs84: HelmertDatumTransform {
+	fileprivate static var osgb36wgs84: HelmertDatumTransform {
 		return wgs84osgb36.inverse
+	}
+}
+
+
+
+extension HelmertDatumTransform {
+
+	public init(from: Datum, to: Datum) {
+
+		switch (from, to) {
+
+			// If it's the same
+			case (.wgs84, .wgs84): self = .identity
+			case (.osgb36, .osgb36): self = .identity
+
+			case (.wgs84, .osgb36): self = .wgs84osgb36
+			case (.osgb36, .wgs84): self = .osgb36wgs84
+		}
 	}
 }
