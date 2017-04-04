@@ -442,7 +442,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_VERSION = 1.0;
+				PRODUCT_VERSION = 2.0;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -453,7 +453,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_VERSION = 1.0;
+				PRODUCT_VERSION = 2.0;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
