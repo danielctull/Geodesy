@@ -64,4 +64,15 @@ class GridReferenceTests: XCTestCase {
 		let reference = OSGridReference(reference: "HK00")
 		XCTAssertNil(reference)
 	}
+
+	func testCoordinate() {
+		let reference = OSGridReference(reference: "SU 95166 11426")
+		guard let coordinate = reference?.coordinate else {
+			XCTFail()
+			return
+		}
+
+		XCTAssertEqualWithAccuracy(coordinate.latitude, 50.894487, accuracy: 0.01)
+		XCTAssertEqualWithAccuracy(coordinate.longitude, -0.64822286, accuracy: 0.01)
+	}
 }

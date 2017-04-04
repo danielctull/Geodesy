@@ -225,4 +225,93 @@ extension OSGridReference {
 		self.gridSquareLetters = regionString
 		self.accuracy = 0
 	}
+
+	public var coordinate: Coordinate {
+
+		let E = Double(easting)
+		let N = Double(northing)
+
+		// Airy 1830 major & minor semi-axes
+		let a = Ellipsoid.airy1830.semiMajorAxis
+		let b = Ellipsoid.airy1830.semiMinorAxis
+
+		// National Grid scale factor on central meridian
+		let F0 = 0.9996012717
+
+		// National Grid true origin is 49ºN,2ºW
+		let lat0 = radians(from: 49)
+		let lon0 = radians(from: -2)
+
+		// northing & easting of true origin, metres
+		let N0: Double = -100000
+		let E0: Double = 400000
+
+		// eccentricity squared
+		let e2 = 1 - (b * b) / (a * a)
+
+		let n = (a - b) / (a + b)
+		let n2 = n * n
+		let n3 = n * n * n
+
+		var lat = lat0
+		var M: Double = 0
+
+		repeat {
+
+			lat = (N - N0 - M) / (a * F0) + lat
+
+			let Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (lat - lat0)
+			let Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * sin(lat - lat0) * cos(lat + lat0)
+			let Mc = ((15 / 8) * n2 + (15 / 8) * n3) * sin(2 * (lat - lat0)) * cos(2 * (lat + lat0))
+			let Md = (35 / 24) * n3 * sin(3 * (lat - lat0)) * cos(3 * (lat + lat0))
+
+			// meridional arc
+			M = b * F0 * (Ma - Mb + Mc - Md)
+
+		} while (N - N0 - M >= 0.00001) // ie until < 0.01mm
+
+		let cosLat = cos(lat)
+		let sinLat = sin(lat)
+
+		// transverse radius of curvature
+		let nu = a * F0 / sqrt(1 - e2 * sinLat * sinLat)
+
+		// meridional radius of curvature
+		let rho = a * F0 * (1 - e2) / pow(1 - e2 * sinLat * sinLat, 1.5)
+
+		let eta2 = nu / rho - 1
+
+		let tanLat = tan(lat)
+		let tan2lat = tanLat * tanLat
+		let tan4lat = tan2lat * tan2lat
+		let tan6lat = tan4lat * tan2lat
+
+		let secLat = 1 / cosLat
+
+		let nu3 = nu * nu * nu
+		let nu5 = nu3 * nu * nu
+		let nu7 = nu5 * nu * nu
+
+		let VII = tanLat / (2 * rho * nu)
+		let VIII = tanLat / (24 * rho * nu3) * (5 + 3 * tan2lat + eta2 - 9 * tan2lat * eta2)
+		let IX = tanLat / (720 * rho * nu5) * (61 + 90 * tan2lat + 45 * tan4lat)
+		let X = secLat / nu
+		let XI = secLat / (6 * nu3) * (nu / rho + 2 * tan2lat)
+		let XII = secLat / (120 * nu5) * (5 + 28 * tan2lat + 24 * tan4lat)
+		let XIIA = secLat / (5040 * nu7) * (61 + 662 * tan2lat + 1320 * tan4lat + 720 * tan6lat)
+
+		let dE = E - E0
+		let dE2 = dE * dE
+		let dE3 = dE2 * dE
+		let dE4 = dE2 * dE2
+		let dE5 = dE3 * dE2
+		let dE6 = dE4 * dE2
+		let dE7 = dE5 * dE2
+		lat = lat - VII * dE2 + VIII * dE4 - IX * dE6
+		let lon = lon0 + X * dE - XI * dE3 + XII * dE5 - XIIA * dE7
+
+		let latitude = degrees(from: lat)
+		let longitude = degrees(from: lon)
+		return Coordinate(latitude: latitude, longitude: longitude, accuracy: 5, system: .osgb36)
+	}
 }
