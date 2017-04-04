@@ -3,6 +3,7 @@ public struct OSGridReference {
 	public let gridSquareLetters: String
 	public let easting: Int
 	public let northing: Int
+	public let accuracy: Int
 }
 
 
@@ -25,6 +26,8 @@ extension OSGridReference {
 		guard coordinate.system == .osgb36 else {
 			return nil
 		}
+
+		accuracy = Int(ceil(coordinate.accuracy))
 
 
 		let lat = radians(from: coordinate.latitude)
@@ -220,5 +223,6 @@ extension OSGridReference {
 		self.easting = easting
 		self.northing = northing
 		self.gridSquareLetters = regionString
+		self.accuracy = 0
 	}
 }

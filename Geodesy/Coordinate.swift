@@ -3,12 +3,14 @@ public struct Coordinate {
 
 	public let latitude: Double
 	public let longitude: Double
+	public let accuracy: Double
 	public let system: CoordinateSystem
 
-	public init(latitude: Double, longitude: Double, system: CoordinateSystem = .wgs84) {
+	public init(latitude: Double, longitude: Double, accuracy: Double = 0, system: CoordinateSystem = .wgs84) {
 		self.latitude = latitude
 		self.longitude = longitude
 		self.system = system
+		self.accuracy = accuracy
 	}
 }
 
@@ -86,6 +88,10 @@ extension Coordinate {
 		let newLatitude = degrees(from: phi)
 		let newLongitude = degrees(from: lambda)
 
-		return Coordinate(latitude: newLatitude, longitude: newLongitude, system: newSystem)
+		return Coordinate(
+			latitude: newLatitude,
+			longitude: newLongitude,
+			accuracy: accuracy + datumTransform.accuracy,
+			system: newSystem)
 	}
 }

@@ -8,6 +8,9 @@ public struct HelmertDatumTransform {
 	public let rotateY: Double
 	public let rotateZ: Double
 	public let scale: Double
+
+	/// The accuracy of a conversion performed
+	public let accuracy: Double
 }
 
 
@@ -23,7 +26,8 @@ extension HelmertDatumTransform {
 			rotateX: -rotateX,
 			rotateY: -rotateY,
 			rotateZ: -rotateZ,
-			scale: -scale)
+			scale: -scale,
+			accuracy: accuracy)
 	}
 }
 
@@ -40,7 +44,8 @@ extension HelmertDatumTransform {
 			rotateX: 0,
 			rotateY: 0,
 			rotateZ: 0,
-			scale: 1)
+			scale: 1,
+			accuracy: 0)
 	}
 
 	fileprivate static var wgs84osgb36: HelmertDatumTransform {
@@ -51,7 +56,8 @@ extension HelmertDatumTransform {
 			rotateX: -0.1502,
 			rotateY: -0.2470,
 			rotateZ: -0.8421,
-			scale: 20.4894)
+			scale: 20.4894,
+			accuracy: 5) // According to the OS
 	}
 
 	fileprivate static var osgb36wgs84: HelmertDatumTransform {

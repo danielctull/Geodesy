@@ -15,8 +15,9 @@ class GridReferenceTests: XCTestCase {
 	func testInitCoordinateWGS84() {
 		let coordinate = Coordinate(latitude: 52.657968, longitude: 1.7160229, system: .wgs84)
 		let reference = OSGridReference(coordinate: coordinate)
-		AssertEqual(reference?.easting, 651408, accuracy: 4)
-		AssertEqual(reference?.northing, 313176, accuracy: 4)
+		XCTAssertEqual(reference?.accuracy, 5)
+		AssertEqual(reference?.easting, 651408, accuracy: reference?.accuracy)
+		AssertEqual(reference?.northing, 313176, accuracy: reference?.accuracy)
 		XCTAssertEqual(reference?.gridSquareLetters, "TG")
 	}
 
