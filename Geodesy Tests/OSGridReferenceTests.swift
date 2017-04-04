@@ -2,7 +2,7 @@
 import XCTest
 import Geodesy
 
-class GridReferenceTests: XCTestCase {
+class OSGridReferenceTests: XCTestCase {
 
 	func testInitCoordinateOSGB36() {
 		let coordinate = Coordinate(latitude: 52.657568, longitude: 1.717908, system: .osgb36)
