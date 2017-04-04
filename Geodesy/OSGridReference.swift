@@ -129,4 +129,96 @@ extension OSGridReference {
 
 		gridSquareLetters = String(eastingLetter) + String(northingLetter)
 	}
+
+	public init?(reference inReference: String) {
+
+		var reference = inReference.uppercased()
+
+		// Remove any extra characters
+		let characterSet = CharacterSet.uppercaseLetters.union(.decimalDigits).inverted
+		let array = reference.components(separatedBy: characterSet)
+		reference = array.joined()
+
+		let characters = reference.characters
+
+		guard characters.count >= 2 else {
+			return nil
+		}
+
+
+		// GRID REGION
+
+		let regionEndIndex = characters.index(characters.startIndex, offsetBy: 2)
+		let regionString = reference.substring(to: regionEndIndex)
+
+		guard
+			let eastingCharacter = regionString.characters.first,
+			let northingCharacter = regionString.characters.last,
+			let A = UnicodeScalar("A"),
+			let eastingLetter = UnicodeScalar(String(eastingCharacter)),
+			let northingLetter = UnicodeScalar(String(northingCharacter))
+		else {
+			return nil
+		}
+
+		// get numeric values of letter references, mapping A->0, B->1, C->2, etc:
+		var eastingValue = eastingLetter.value - A.value
+		var northingValue = northingLetter.value - A.value
+
+		// shuffle down letters after 'I' since 'I' is not used in grid:
+		if eastingValue > 7 { eastingValue -= 1 }
+		if northingValue > 7 { northingValue -= 1 }
+
+
+		// convert grid letters into 100km-square indexes from false origin (grid square SV):
+		let eastingRegion = Int(((eastingValue - 2) % 5) * 5 + (northingValue % 5))
+		let northingRegion = Int((19 - floor(Double(eastingValue / 5)) * 5) - floor(Double(northingValue / 5)))
+
+		// Outside of the National Grid.
+		guard
+			eastingRegion >= 0,
+			eastingRegion <= 6,
+			northingRegion >= 0,
+			northingRegion <= 12
+		else {
+			return nil
+		}
+
+
+
+		// VALUE PART
+
+		let valueString = reference.substring(from: regionEndIndex)
+		let valueCharacters = valueString.characters
+
+		// Make sure we have an even number of values
+		guard valueCharacters.count % 2 == 0 else {
+			return nil
+		}
+
+		let length = valueCharacters.count / 2
+		let midIndex = valueString.index(valueString.startIndex, offsetBy: length)
+
+		var padding = "50000"
+		padding = padding.substring(to: padding.index(padding.endIndex, offsetBy: -length))
+
+
+		var eastingString = valueString.substring(to: midIndex)
+		var northingString = valueString.substring(from: midIndex)
+
+		eastingString = "\(eastingRegion)\(eastingString)\(padding)"
+		northingString = "\(northingRegion)\(northingString)\(padding)"
+
+
+		guard
+			let easting = Int(eastingString),
+			let northing = Int(northingString)
+		else {
+			return nil
+		}
+
+		self.easting = easting
+		self.northing = northing
+		self.gridSquareLetters = regionString
+	}
 }
