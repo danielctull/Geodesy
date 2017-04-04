@@ -27,3 +27,10 @@ extension Ellipsoid {
 		return Ellipsoid(semiMajorAxis: 6378388.000, semiMinorAxis: 6356911.946, inverseFlattening: 1/297.0)
 	}
 }
+
+
+
+extension Ellipsoid: Equatable {}
+public func ==(lhs: Ellipsoid, rhs: Ellipsoid) -> Bool {
+	return lhs.semiMajorAxis == rhs.semiMajorAxis && lhs.semiMinorAxis == rhs.semiMinorAxis && lhs.inverseFlattening == rhs.inverseFlattening
+}

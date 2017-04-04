@@ -20,6 +20,9 @@
 		2407325E1E930A6400F3EA1D /* Geodesy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407325D1E930A6400F3EA1D /* Geodesy.swift */; };
 		2407325F1E930A6400F3EA1D /* Geodesy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407325D1E930A6400F3EA1D /* Geodesy.swift */; };
 		240732631E930AE700F3EA1D /* CoordinateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732601E930AAE00F3EA1D /* CoordinateConversionTests.swift */; };
+		240732671E930E3000F3EA1D /* OSGridReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732661E930E3000F3EA1D /* OSGridReference.swift */; };
+		240732681E930E3000F3EA1D /* OSGridReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732661E930E3000F3EA1D /* OSGridReference.swift */; };
+		2407326B1E9317FB00F3EA1D /* GridReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407326A1E9317FB00F3EA1D /* GridReferenceTests.swift */; };
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
@@ -73,6 +76,8 @@
 		2407325A1E93005A00F3EA1D /* HelmertDatumTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelmertDatumTransform.swift; sourceTree = "<group>"; };
 		2407325D1E930A6400F3EA1D /* Geodesy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geodesy.swift; sourceTree = "<group>"; };
 		240732601E930AAE00F3EA1D /* CoordinateConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateConversionTests.swift; sourceTree = "<group>"; };
+		240732661E930E3000F3EA1D /* OSGridReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSGridReference.swift; sourceTree = "<group>"; };
+		2407326A1E9317FB00F3EA1D /* GridReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridReferenceTests.swift; sourceTree = "<group>"; };
 		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
 		24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geodesy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A3116F5DC2700479DDD /* GDYOSGridReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYOSGridReference.h; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 				2407325D1E930A6400F3EA1D /* Geodesy.swift */,
 				24948A0D16F5DAE100479DDD /* Geodesy.h */,
 				24B30E871700668B00221FFF /* Geodesy.m */,
+				240732661E930E3000F3EA1D /* OSGridReference.swift */,
 				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
 				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
 				240732571E92FFAD00F3EA1D /* Coordinate.swift */,
@@ -207,6 +213,7 @@
 				24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */,
 				24B512F0170725F5009822CD /* GDYCoordinateTests.m */,
 				240732601E930AAE00F3EA1D /* CoordinateConversionTests.swift */,
+				2407326A1E9317FB00F3EA1D /* GridReferenceTests.swift */,
 			);
 			path = "Geodesy Tests";
 			sourceTree = "<group>";
@@ -438,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */,
+				2407326B1E9317FB00F3EA1D /* GridReferenceTests.swift in Sources */,
 				24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */,
 				24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */,
 				24B512F1170725F5009822CD /* GDYCoordinateTests.m in Sources */,
@@ -450,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B72F0E1A1CA8C400AFFA45 /* Geodesy.m in Sources */,
+				240732671E930E3000F3EA1D /* OSGridReference.swift in Sources */,
 				2407324F1E92FC3B00F3EA1D /* Datum.swift in Sources */,
 				240732551E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */,
 				24B72F0F1A1CA8C400AFFA45 /* GDYOSGridReference.m in Sources */,
@@ -470,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F6015F1E71686200EC00D2 /* Geodesy.m in Sources */,
+				240732681E930E3000F3EA1D /* OSGridReference.swift in Sources */,
 				240732501E92FC3B00F3EA1D /* Datum.swift in Sources */,
 				240732561E92FEA900F3EA1D /* CoordinateSystem.swift in Sources */,
 				24F601601E71686200EC00D2 /* GDYOSGridReference.m in Sources */,
