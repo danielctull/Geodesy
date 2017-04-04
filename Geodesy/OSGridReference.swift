@@ -1,6 +1,6 @@
 
-public struct OSGridReference {
-	public let gridSquareLetters: String
+public struct OSGridReference: GridReference {
+	public let region: String
 	public let easting: Int
 	public let northing: Int
 	public let accuracy: Int
@@ -130,7 +130,7 @@ extension OSGridReference {
 			return nil
 		}
 
-		gridSquareLetters = String(eastingLetter) + String(northingLetter)
+		region = String(eastingLetter) + String(northingLetter)
 	}
 
 	public init?(reference inReference: String) {
@@ -222,7 +222,7 @@ extension OSGridReference {
 
 		self.easting = easting
 		self.northing = northing
-		self.gridSquareLetters = regionString
+		self.region = regionString
 		self.accuracy = 0
 	}
 

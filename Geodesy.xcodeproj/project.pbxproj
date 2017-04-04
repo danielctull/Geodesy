@@ -24,6 +24,8 @@
 		240732681E930E3000F3EA1D /* OSGridReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240732661E930E3000F3EA1D /* OSGridReference.swift */; };
 		2407326B1E9317FB00F3EA1D /* GridReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407326A1E9317FB00F3EA1D /* GridReferenceTests.swift */; };
 		2432726A1E93AE4C00249145 /* Asserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243272691E93AE4C00249145 /* Asserts.swift */; };
+		2432726C1E93B47200249145 /* GridReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432726B1E93B47200249145 /* GridReference.swift */; };
+		2432726D1E93B47200249145 /* GridReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432726B1E93B47200249145 /* GridReference.swift */; };
 		24948A3C16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A3B16F5DEF100479DDD /* DCTOSGridRefCoordinateTests.m */; };
 		24948A4716F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4616F6097700479DDD /* DCTOSGB36ToGridRefTransformerTests.m */; };
 		24948A4D16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24948A4C16F6171B00479DDD /* DCTWGS84ToOSGB36TransformerTests.m */; };
@@ -80,6 +82,7 @@
 		240732661E930E3000F3EA1D /* OSGridReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSGridReference.swift; sourceTree = "<group>"; };
 		2407326A1E9317FB00F3EA1D /* GridReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridReferenceTests.swift; sourceTree = "<group>"; };
 		243272691E93AE4C00249145 /* Asserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asserts.swift; sourceTree = "<group>"; };
+		2432726B1E93B47200249145 /* GridReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridReference.swift; sourceTree = "<group>"; };
 		24948A0D16F5DAE100479DDD /* Geodesy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geodesy.h; sourceTree = "<group>"; };
 		24948A1B16F5DB1E00479DDD /* Geodesy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geodesy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24948A3116F5DC2700479DDD /* GDYOSGridReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDYOSGridReference.h; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				2407325D1E930A6400F3EA1D /* Geodesy.swift */,
 				24948A0D16F5DAE100479DDD /* Geodesy.h */,
 				24B30E871700668B00221FFF /* Geodesy.m */,
+				2432726B1E93B47200249145 /* GridReference.swift */,
 				240732661E930E3000F3EA1D /* OSGridReference.swift */,
 				24948A3116F5DC2700479DDD /* GDYOSGridReference.h */,
 				24948A3216F5DC2700479DDD /* GDYOSGridReference.m */,
@@ -475,6 +479,7 @@
 				24B72F121A1CA8C400AFFA45 /* GDYEllipsoid.m in Sources */,
 				24B72F131A1CA8C400AFFA45 /* GDYDatum.m in Sources */,
 				24B72F141A1CA8C400AFFA45 /* GDYCoordinateSystem.m in Sources */,
+				2432726C1E93B47200249145 /* GridReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +501,7 @@
 				24F601631E71686200EC00D2 /* GDYEllipsoid.m in Sources */,
 				24F601641E71686200EC00D2 /* GDYDatum.m in Sources */,
 				24F601651E71686200EC00D2 /* GDYCoordinateSystem.m in Sources */,
+				2432726D1E93B47200249145 /* GridReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

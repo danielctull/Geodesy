@@ -9,7 +9,7 @@ class GridReferenceTests: XCTestCase {
 		let reference = OSGridReference(coordinate: coordinate)
 		XCTAssertEqual(reference?.easting, 651408)
 		XCTAssertEqual(reference?.northing, 313176)
-		XCTAssertEqual(reference?.gridSquareLetters, "TG")
+		XCTAssertEqual(reference?.region, "TG")
 	}
 
 	func testInitCoordinateWGS84() {
@@ -18,19 +18,19 @@ class GridReferenceTests: XCTestCase {
 		XCTAssertEqual(reference?.accuracy, 5)
 		AssertEqual(reference?.easting, 651408, accuracy: reference?.accuracy)
 		AssertEqual(reference?.northing, 313176, accuracy: reference?.accuracy)
-		XCTAssertEqual(reference?.gridSquareLetters, "TG")
+		XCTAssertEqual(reference?.region, "TG")
 	}
 
 	func testInitReference1() {
 		let reference = OSGridReference(reference: "TG51")
-		XCTAssertEqual(reference?.gridSquareLetters, "TG")
+		XCTAssertEqual(reference?.region, "TG")
 		XCTAssertEqual(reference?.easting, 655000)
 		XCTAssertEqual(reference?.northing, 315000)
 	}
 
 	func testInitReference2() {
 		let reference = OSGridReference(reference: "SU951114")
-		XCTAssertEqual(reference?.gridSquareLetters, "SU")
+		XCTAssertEqual(reference?.region, "SU")
 		XCTAssertEqual(reference?.easting, 495150)
 		XCTAssertEqual(reference?.northing, 111450)
 	}
