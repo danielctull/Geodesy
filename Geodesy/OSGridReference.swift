@@ -1,4 +1,6 @@
 
+import Foundation
+
 public struct OSGridReference: GridReference {
 	public let region: String
 	public let easting: Int

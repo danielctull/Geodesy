@@ -1,6 +1,8 @@
 
 // http://www.movable-type.co.uk/scripts/latlong.html
 
+import Foundation
+
 extension Coordinate {
 
 	public func initialHeading(to coordinate: Coordinate) -> Double {
