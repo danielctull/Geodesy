@@ -72,7 +72,7 @@ class OSGridReferenceTests: XCTestCase {
 			return
 		}
 
-		XCTAssertEqualWithAccuracy(coordinate.latitude, 50.894487, accuracy: 0.01)
-		XCTAssertEqualWithAccuracy(coordinate.longitude, -0.64822286, accuracy: 0.01)
+		XCTAssertEqual(coordinate.latitude, 50.894487, accuracy: 0.01)
+		XCTAssertEqual(coordinate.longitude, -0.64822286, accuracy: 0.01)
 	}
 }
