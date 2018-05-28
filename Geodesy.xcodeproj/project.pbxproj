@@ -323,16 +323,17 @@
 				TargetAttributes = {
 					24948A1A16F5DB1E00479DDD = {
 						DevelopmentTeam = B2M757K4LG;
+						LastSwiftMigration = 0930;
 					};
 					24B72EF31A1CA83600AFFA45 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = B2M757K4LG;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					24F6015D1E71686200EC00D2 = {
 						DevelopmentTeam = B2M757K4LG;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -443,7 +444,7 @@
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_VERSION = 2.0;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -454,7 +455,7 @@
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.danieltull.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_VERSION = 2.0;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -462,7 +463,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F6013F1E7167FC00EC00D2 /* iOS Tests.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "Geodesy Tests";
 			};
 			name = Debug;
@@ -471,7 +471,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F6013F1E7167FC00EC00D2 /* iOS Tests.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "Geodesy Tests";
 			};
 			name = Release;
