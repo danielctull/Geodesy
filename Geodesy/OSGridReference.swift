@@ -142,21 +142,19 @@ extension OSGridReference {
 		let array = reference.components(separatedBy: characterSet)
 		reference = array.joined()
 
-		let characters = reference.characters
-
-		guard characters.count >= 2 else {
+		guard reference.count >= 2 else {
 			return nil
 		}
 
 
 		// GRID REGION
 
-		let regionEndIndex = characters.index(characters.startIndex, offsetBy: 2)
-		let regionString = reference.substring(to: regionEndIndex)
+		let regionEndIndex = reference.index(reference.startIndex, offsetBy: 2)
+		let regionString = reference[..<regionEndIndex]
 
 		guard
-			let eastingCharacter = regionString.characters.first,
-			let northingCharacter = regionString.characters.last,
+			let eastingCharacter = regionString.first,
+			let northingCharacter = regionString.last,
 			let A = UnicodeScalar("A"),
 			let eastingLetter = UnicodeScalar(String(eastingCharacter)),
 			let northingLetter = UnicodeScalar(String(northingCharacter))
@@ -191,23 +189,22 @@ extension OSGridReference {
 
 		// VALUE PART
 
-		let valueString = reference.substring(from: regionEndIndex)
-		let valueCharacters = valueString.characters
+		let valueString = reference[regionEndIndex...]
 
 		// Make sure we have an even number of values
-		guard valueCharacters.count % 2 == 0 else {
+		guard valueString.count % 2 == 0 else {
 			return nil
 		}
 
-		let length = valueCharacters.count / 2
+		let length = valueString.count / 2
 		let midIndex = valueString.index(valueString.startIndex, offsetBy: length)
 
 		var padding = "50000"
-		padding = padding.substring(to: padding.index(padding.endIndex, offsetBy: -length))
+		padding = String(padding[..<padding.index(padding.endIndex, offsetBy: -length)])
 
 
-		var eastingString = valueString.substring(to: midIndex)
-		var northingString = valueString.substring(from: midIndex)
+		var eastingString = String(valueString[..<midIndex])
+		var northingString = String(valueString[midIndex...])
 
 		eastingString = "\(eastingRegion)\(eastingString)\(padding)"
 		northingString = "\(northingRegion)\(northingString)\(padding)"
@@ -222,7 +219,7 @@ extension OSGridReference {
 
 		self.easting = easting
 		self.northing = northing
-		self.region = regionString
+		self.region = String(regionString)
 		self.accuracy = 0
 	}
 
