@@ -98,8 +98,6 @@ extension OSGridReference {
 		northing = Int(I + II * dLon2 + III * dLon4 + IIIA * dLon6)
 		easting = Int(E0 + IV * dLon + V * dLon3 + VI * dLon5)
 
-
-
 		// get the 100km-grid indices
 		let easting100k = floor(Double(easting) / 100000)
 		let northing100k = floor(Double(northing)/100000)
@@ -124,8 +122,9 @@ extension OSGridReference {
 		if eastingLetterValue > 7 { eastingLetterValue += 1 }
 		if northingLetterValue > 7 { northingLetterValue += 1 }
 
+		let A = UnicodeScalar("A")
+
 		guard
-			let A = UnicodeScalar("A"),
 			let eastingLetter = UnicodeScalar(A.value + eastingLetterValue),
 			let northingLetter = UnicodeScalar(A.value + northingLetterValue)
 		else {
@@ -154,10 +153,11 @@ extension OSGridReference {
 		let regionEndIndex = reference.index(reference.startIndex, offsetBy: 2)
 		let regionString = reference[..<regionEndIndex]
 
+		let A = UnicodeScalar("A")
+
 		guard
 			let eastingCharacter = regionString.first,
 			let northingCharacter = regionString.last,
-			let A = UnicodeScalar("A"),
 			let eastingLetter = UnicodeScalar(String(eastingCharacter)),
 			let northingLetter = UnicodeScalar(String(northingCharacter))
 		else {
