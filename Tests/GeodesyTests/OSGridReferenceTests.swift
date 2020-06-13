@@ -68,7 +68,7 @@ final class OSGridReferenceTests: XCTestCase {
 	func testCoordinate() throws {
 		let reference = OSGridReference(reference: "SU 95166 11426")
 		let coordinate = try XCTUnwrap(reference?.coordinate)
-		XCTAssertEqual(coordinate.latitude, 50.894487, accuracy: 0.01)
-		XCTAssertEqual(coordinate.longitude, -0.64822286, accuracy: 0.01)
+		XCTAssertEqual(coordinate.latitude.degrees, 50.894487, accuracy: 0.01)
+		XCTAssertEqual(coordinate.longitude.degrees, -0.64822286, accuracy: 0.01)
 	}
 }

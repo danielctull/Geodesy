@@ -26,8 +26,8 @@ extension OSGridReference {
 
 		accuracy = Int(ceil(coordinate.accuracy))
 
-		let lat = radians(from: coordinate.latitude)
-		let lon = radians(from: coordinate.longitude)
+        let lat = coordinate.latitude.radians
+        let lon = coordinate.longitude.radians
 
 		// Airy 1830 major & minor semi-axes
 		let a = Ellipsoid.airy1830.semiMajorAxis
@@ -37,8 +37,8 @@ extension OSGridReference {
 		let F0 = 0.9996012717
 
 		// National Grid true origin is 49ºN,2ºW
-		let lat0 = radians(from: 49)
-		let lon0 = radians(from: -2)
+        let lat0 = Angle(degrees: 49).radians
+        let lon0 = Angle(degrees: -2).radians
 
 		// northing & easting of true origin, metres
 		let N0: Double = -100000
@@ -183,9 +183,7 @@ extension OSGridReference {
 		let valueString = reference[regionEndIndex...]
 
 		// Make sure we have an even number of values
-		guard valueString.count % 2 == 0 else {
-			return nil
-		}
+        guard valueString.count % 2 == 0 else { return nil }
 
 		let length = valueString.count / 2
 		let midIndex = valueString.index(valueString.startIndex, offsetBy: length)
@@ -225,8 +223,8 @@ extension OSGridReference {
 		let F0 = 0.9996012717
 
 		// National Grid true origin is 49ºN,2ºW
-		let lat0 = radians(from: 49)
-		let lon0 = radians(from: -2)
+        let lat0 = Angle(degrees: 49).radians
+        let lon0 = Angle(degrees: -2).radians
 
 		// northing & easting of true origin, metres
 		let N0: Double = -100000
@@ -296,8 +294,11 @@ extension OSGridReference {
 		lat -= VII * dE2 + VIII * dE4 - IX * dE6
 		let lon = lon0 + X * dE - XI * dE3 + XII * dE5 - XIIA * dE7
 
-		let latitude = degrees(from: lat)
-		let longitude = degrees(from: lon)
-		return Coordinate(latitude: latitude, longitude: longitude, accuracy: 5, system: .osgb36)
+		let latitude = Angle(radians: lat)
+		let longitude = Angle(radians: lon)
+		return Coordinate(latitude: latitude,
+                          longitude: longitude,
+                          accuracy: 5,
+                          system: .osgb36)
 	}
 }

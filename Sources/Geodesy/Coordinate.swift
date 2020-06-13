@@ -3,12 +3,12 @@ import Foundation
 
 public struct Coordinate {
 
-	public let latitude: Double
-	public let longitude: Double
+	public let latitude: Angle
+	public let longitude: Angle
 	public let accuracy: Double
 	public let system: CoordinateSystem
 
-	public init(latitude: Double, longitude: Double, accuracy: Double = 0, system: CoordinateSystem = .wgs84) {
+	public init(latitude: Angle, longitude: Angle, accuracy: Double = 0, system: CoordinateSystem = .wgs84) {
 		self.latitude = latitude
 		self.longitude = longitude
 		self.system = system
@@ -24,19 +24,16 @@ extension Coordinate {
 
 		// -- 1: convert polar to cartesian coordinates (using ellipse 1)
 
-		let lat = radians(from: latitude)
-		let lon = radians(from: longitude)
-
 		let e1 = system.ellipsoid
 		let e2 = newSystem.ellipsoid
 
 		var a = e1.semiMajorAxis
 		var b = e1.semiMinorAxis
 
-		let sinPhi = sin(lat)
-		let cosPhi = cos(lat)
-		let sinLambda = sin(lon)
-		let cosLambda = cos(lon)
+        let sinPhi = sin(latitude.radians)
+		let cosPhi = cos(latitude.radians)
+        let sinLambda = sin(longitude.radians)
+        let cosLambda = cos(longitude.radians)
 		var H = 24.7  // for the moment
 
 		var eSq = (a * a - b * b) / (a * a)
@@ -53,9 +50,9 @@ extension Coordinate {
 		let tz = datumTransform.transformZ
 
 		// normalise seconds to radians
-		let rx = radians(from: datumTransform.rotateX / 3600)
-		let ry = radians(from: datumTransform.rotateY / 3600)
-		let rz = radians(from: datumTransform.rotateZ / 3600)
+        let rx = Angle(degrees: datumTransform.rotateX / 3600).radians
+        let ry = Angle(degrees: datumTransform.rotateY / 3600).radians
+        let rz = Angle(degrees: datumTransform.rotateZ / 3600).radians
 
 		// normalise ppm to (s+1)
 		let s1 = datumTransform.scale / 1e6 + 1
@@ -85,8 +82,8 @@ extension Coordinate {
 		let lambda = atan2(y2, x2)
 		H = p / cos(phi) - nu
 
-		let newLatitude = degrees(from: phi)
-		let newLongitude = degrees(from: lambda)
+		let newLatitude = Angle(radians: phi)
+		let newLongitude = Angle(radians: lambda)
 
 		return Coordinate(
 			latitude: newLatitude,
