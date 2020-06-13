@@ -16,8 +16,6 @@ public struct Coordinate {
 	}
 }
 
-
-
 extension Coordinate {
 
 	public func convert(to newSystem: CoordinateSystem) -> Coordinate {
@@ -41,7 +39,7 @@ extension Coordinate {
 		let cosLambda = cos(lon)
 		var H = 24.7  // for the moment
 
-		var eSq = (a*a - b*b) / (a*a)
+		var eSq = (a * a - b * b) / (a * a)
 		var nu = a / sqrt(1 - eSq * sinPhi * sinPhi)
 
 		let x1 = (nu + H) * cosPhi * cosLambda
@@ -73,12 +71,12 @@ extension Coordinate {
 		b = e2.semiMinorAxis
 		let precision = 4 / a;  // results accurate to around 4 metres
 
-		eSq = (a*a - b*b) / (a*a)
-		let p = sqrt(x2*x2 + y2*y2)
+		eSq = (a * a - b * b) / (a * a)
+		let p = sqrt(x2 * x2 + y2 * y2)
 		var phi = atan2(z2, p * (1 - eSq))
 		var phiP = 2 * Double.pi
 
-		while (fabs(phi - phiP) > precision) {
+		while fabs(phi - phiP) > precision {
 			nu = a / sqrt(1 - eSq * sin(phi) * sin(phi))
 			phiP = phi
 			phi = atan2(z2 + eSq * nu * sin(phi), p)

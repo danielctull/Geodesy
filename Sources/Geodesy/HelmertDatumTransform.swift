@@ -13,8 +13,6 @@ public struct HelmertDatumTransform {
 	public let accuracy: Double
 }
 
-
-
 extension HelmertDatumTransform {
 
 	/// Get the inverse of this transform.
@@ -31,13 +29,11 @@ extension HelmertDatumTransform {
 	}
 }
 
-
-
 /// https://en.wikipedia.org/wiki/Helmert_transformation#Standard_parameters
 extension HelmertDatumTransform {
 
 	fileprivate static var identity: HelmertDatumTransform {
-		return HelmertDatumTransform(
+		HelmertDatumTransform(
 			transformX: 0,
 			transformY: 0,
 			transformZ: 0,
@@ -49,7 +45,7 @@ extension HelmertDatumTransform {
 	}
 
 	fileprivate static var wgs84osgb36: HelmertDatumTransform {
-		return HelmertDatumTransform(
+		HelmertDatumTransform(
 			transformX: -446.448,
 			transformY: 125.157,
 			transformZ: -542.060,
@@ -61,11 +57,9 @@ extension HelmertDatumTransform {
 	}
 
 	fileprivate static var osgb36wgs84: HelmertDatumTransform {
-		return wgs84osgb36.inverse
+		wgs84osgb36.inverse
 	}
 }
-
-
 
 extension HelmertDatumTransform {
 
@@ -73,12 +67,12 @@ extension HelmertDatumTransform {
 
 		switch (from, to) {
 
-			// If it's the same
-			case (.wgs84, .wgs84): self = .identity
-			case (.osgb36, .osgb36): self = .identity
+		// If it's the same
+		case (.wgs84, .wgs84): self = .identity
+		case (.osgb36, .osgb36): self = .identity
 
-			case (.wgs84, .osgb36): self = .wgs84osgb36
-			case (.osgb36, .wgs84): self = .osgb36wgs84
+		case (.wgs84, .osgb36): self = .wgs84osgb36
+		case (.osgb36, .wgs84): self = .osgb36wgs84
 		}
 	}
 }

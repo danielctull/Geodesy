@@ -1,8 +1,8 @@
 
-import XCTest
 import Geodesy
+import XCTest
 
-class OSGridReferenceTests: XCTestCase {
+final class OSGridReferenceTests: XCTestCase {
 
 	func testInitCoordinateOSGB36() {
 		let coordinate = Coordinate(latitude: 52.657568, longitude: 1.717908, system: .osgb36)
@@ -65,13 +65,9 @@ class OSGridReferenceTests: XCTestCase {
 		XCTAssertNil(reference)
 	}
 
-	func testCoordinate() {
+	func testCoordinate() throws {
 		let reference = OSGridReference(reference: "SU 95166 11426")
-		guard let coordinate = reference?.coordinate else {
-			XCTFail()
-			return
-		}
-
+		let coordinate = try XCTUnwrap(reference?.coordinate)
 		XCTAssertEqual(coordinate.latitude, 50.894487, accuracy: 0.01)
 		XCTAssertEqual(coordinate.longitude, -0.64822286, accuracy: 0.01)
 	}

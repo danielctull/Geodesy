@@ -1,8 +1,8 @@
 
-import XCTest
 import Geodesy
+import XCTest
 
-class GridReferenceTests: XCTestCase {
+final class GridReferenceTests: XCTestCase {
 
 	func testNumberOfFigures() {
 		let reference = OSGridReference(reference: "SU 95166 11426")

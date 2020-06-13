@@ -1,8 +1,8 @@
 
-import XCTest
 import Geodesy
+import XCTest
 
-class CoordinateConversionTests: XCTestCase {
+final class CoordinateConversionTests: XCTestCase {
 
 	func testWGS84toWGS84() {
 		let wgs84 = Coordinate(latitude: 52.657977, longitude: 1.716038, system: .wgs84)

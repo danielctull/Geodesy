@@ -1,8 +1,8 @@
 
-import XCTest
 import Geodesy
+import XCTest
 
-class CoordinateDirectionsTests: XCTestCase {
+final class CoordinateDirectionsTests: XCTestCase {
 
 	func testHeading() {
 		let coordinate1 = Coordinate(latitude: 50.887205, longitude: -0.66426516)

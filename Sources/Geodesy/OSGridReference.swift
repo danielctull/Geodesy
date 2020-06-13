@@ -8,9 +8,6 @@ public struct OSGridReference: GridReference {
 	public let accuracy: Int
 }
 
-
-
-
 extension OSGridReference {
 
 	public init?(coordinate inCoordinate: Coordinate) {
@@ -25,12 +22,9 @@ extension OSGridReference {
 
 		// Do a sanity check here to make sure the
 		// coordinate is now in the OSGB36 system.
-		guard coordinate.system == .osgb36 else {
-			return nil
-		}
+        guard coordinate.system == .osgb36 else { return nil }
 
 		accuracy = Int(ceil(coordinate.accuracy))
-
 
 		let lat = radians(from: coordinate.latitude)
 		let lon = radians(from: coordinate.longitude)
@@ -56,7 +50,6 @@ extension OSGridReference {
 		let n = (a - b) / (a + b)
 		let n2 = n * n
 		let n3 = n * n * n
-
 
 		let cosLat = cos(lat)
 		let sinLat = sin(lat)
@@ -85,8 +78,8 @@ extension OSGridReference {
 		let III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2)
 		let IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat)
 		let IV = nu * cosLat
-		let V = (nu/6)*cos3lat*(nu/rho-tan2lat);
-		let VI = (nu/120) * cos5lat * (5 - 18*tan2lat + tan4lat + 14*eta2 - 58*tan2lat*eta2);
+		let V = (nu / 6) * cos3lat * (nu / rho - tan2lat)
+		let VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2)
 
 		let dLon = lon - lon0
 		let dLon2 = dLon * dLon
@@ -100,7 +93,7 @@ extension OSGridReference {
 
 		// get the 100km-grid indices
 		let easting100k = floor(Double(easting) / 100000)
-		let northing100k = floor(Double(northing)/100000)
+		let northing100k = floor(Double(northing) / 100000)
 
 		// Outside of the National Grid.
 		guard
@@ -147,7 +140,6 @@ extension OSGridReference {
 			return nil
 		}
 
-
 		// GRID REGION
 
 		let regionEndIndex = reference.index(reference.startIndex, offsetBy: 2)
@@ -172,7 +164,6 @@ extension OSGridReference {
 		if eastingValue > 7 { eastingValue -= 1 }
 		if northingValue > 7 { northingValue -= 1 }
 
-
 		// convert grid letters into 100km-square indexes from false origin (grid square SV):
 		let eastingRegion = Int(((eastingValue - 2) % 5) * 5 + (northingValue % 5))
 		let northingRegion = Int((19 - floor(Double(eastingValue / 5)) * 5) - floor(Double(northingValue / 5)))
@@ -186,8 +177,6 @@ extension OSGridReference {
 		else {
 			return nil
 		}
-
-
 
 		// VALUE PART
 
@@ -204,13 +193,11 @@ extension OSGridReference {
 		var padding = "50000"
 		padding = String(padding[..<padding.index(padding.endIndex, offsetBy: -length)])
 
-
 		var eastingString = String(valueString[..<midIndex])
 		var northingString = String(valueString[midIndex...])
 
 		eastingString = "\(eastingRegion)\(eastingString)\(padding)"
 		northingString = "\(northingRegion)\(northingString)\(padding)"
-
 
 		guard
 			let easting = Int(eastingString),
@@ -306,7 +293,7 @@ extension OSGridReference {
 		let dE5 = dE3 * dE2
 		let dE6 = dE4 * dE2
 		let dE7 = dE5 * dE2
-		lat = lat - VII * dE2 + VIII * dE4 - IX * dE6
+		lat -= VII * dE2 + VIII * dE4 - IX * dE6
 		let lon = lon0 + X * dE - XI * dE3 + XII * dE5 - XIIA * dE7
 
 		let latitude = degrees(from: lat)

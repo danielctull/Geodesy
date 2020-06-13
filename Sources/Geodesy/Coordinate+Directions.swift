@@ -36,7 +36,7 @@ extension Coordinate {
 		let toLongitude = radians(from: to.longitude)
 
 		let dLongitude = toLongitude - fromLongitude
-		let dLatitude =  toLatitude - fromLatitude
+		let dLatitude = toLatitude - fromLatitude
 
 		let sinDLatitude2 = sin(dLatitude / 2)
 		let sinDLongitude2 = sin(dLongitude / 2)
