@@ -3,7 +3,7 @@ import Geodesy
 import XCTest
 
 final class GridReferenceTests: XCTestCase {
-    
+
     func testNumberOfFigures() {
         let reference = OSGridReference(reference: "SU 95166 11426")
         let easting = reference?.easting(withNumberOfFigures: 4)
@@ -11,7 +11,7 @@ final class GridReferenceTests: XCTestCase {
         XCTAssertEqual(easting, "9517")
         XCTAssertEqual(northing, "114")
     }
-    
+
     func testNumberOfFiguresTooMany() {
         let reference = OSGridReference(reference: "SU 95166 11426")
         let easting = reference?.easting(withNumberOfFigures: 10)
@@ -19,7 +19,7 @@ final class GridReferenceTests: XCTestCase {
         XCTAssertNil(easting)
         XCTAssertNil(northing)
     }
-    
+
     func testNumberOfFiguresMax() {
         let reference = OSGridReference(reference: "SU 95166 11426")
         let easting = reference?.easting(withNumberOfFigures: 5)
@@ -27,7 +27,7 @@ final class GridReferenceTests: XCTestCase {
         XCTAssertEqual(easting, "95166")
         XCTAssertEqual(northing, "11426")
     }
-    
+
     func testNumberOfFiguresMoreThanGiven() {
         let reference = OSGridReference(reference: "SU 9516 1142")
         let easting = reference?.easting(withNumberOfFigures: 5)

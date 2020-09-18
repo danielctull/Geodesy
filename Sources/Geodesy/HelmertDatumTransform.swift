@@ -8,13 +8,13 @@ public struct HelmertDatumTransform {
     public let rotateY: Double
     public let rotateZ: Double
     public let scale: Double
-    
+
     /// The accuracy of a conversion performed
     public let accuracy: Double
 }
 
 extension HelmertDatumTransform {
-    
+
     /// Get the inverse of this transform.
     public var inverse: HelmertDatumTransform {
         return HelmertDatumTransform(
@@ -31,7 +31,7 @@ extension HelmertDatumTransform {
 
 /// https://en.wikipedia.org/wiki/Helmert_transformation#Standard_parameters
 extension HelmertDatumTransform {
-    
+
     fileprivate static var identity: HelmertDatumTransform {
         HelmertDatumTransform(
             transformX: 0,
@@ -43,7 +43,7 @@ extension HelmertDatumTransform {
             scale: 1,
             accuracy: 0)
     }
-    
+
     fileprivate static var wgs84osgb36: HelmertDatumTransform {
         HelmertDatumTransform(
             transformX: -446.448,
@@ -55,22 +55,22 @@ extension HelmertDatumTransform {
             scale: 20.4894,
             accuracy: 5) // According to the OS
     }
-    
+
     fileprivate static var osgb36wgs84: HelmertDatumTransform {
         wgs84osgb36.inverse
     }
 }
 
 extension HelmertDatumTransform {
-    
+
     public init(from: Datum, to: Datum) {
-        
+
         switch (from, to) {
-        
+
         // If it's the same
         case (.wgs84, .wgs84): self = .identity
         case (.osgb36, .osgb36): self = .identity
-            
+
         case (.wgs84, .osgb36): self = .wgs84osgb36
         case (.osgb36, .wgs84): self = .osgb36wgs84
         }
