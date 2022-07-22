@@ -26,3 +26,10 @@ extension Angle {
         .degrees(arcseconds / 3600)
     }
 }
+
+extension Angle {
+
+    public static prefix func - (angle: Angle) -> Angle {
+        .radians(-angle.radians)
+    }
+}

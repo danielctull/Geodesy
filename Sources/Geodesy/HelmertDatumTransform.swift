@@ -21,9 +21,9 @@ extension HelmertDatumTransform {
             transformX: -transformX,
             transformY: -transformY,
             transformZ: -transformZ,
-            rotateX: .arcseconds(-1 * rotateX.arcseconds),
-            rotateY: .arcseconds(-1 * rotateY.arcseconds),
-            rotateZ: .arcseconds(-1 * rotateZ.arcseconds),
+            rotateX: -rotateX,
+            rotateY: -rotateY,
+            rotateZ: -rotateZ,
             scale: -scale,
             accuracy: accuracy)
     }
