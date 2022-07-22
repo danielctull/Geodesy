@@ -20,7 +20,7 @@ extension Coordinate {
 
     public func convert(to newSystem: CoordinateSystem) -> Coordinate {
 
-        let datumTransform = HelmertDatumTransform(from: system.datum, to: newSystem.datum)
+        let datumTransform = HelmertTransform(from: system.datum, to: newSystem.datum)
 
         // -- 1: convert polar to cartesian coordinates (using ellipse 1)
 

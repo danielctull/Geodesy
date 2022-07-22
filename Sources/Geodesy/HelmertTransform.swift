@@ -1,6 +1,6 @@
 
 /// Transforms to apply to coordinates.
-public struct HelmertDatumTransform {
+public struct HelmertTransform {
     public let transformX: Double
     public let transformY: Double
     public let transformZ: Double
@@ -13,11 +13,11 @@ public struct HelmertDatumTransform {
     public let accuracy: Double
 }
 
-extension HelmertDatumTransform {
+extension HelmertTransform {
 
     /// Get the inverse of this transform.
-    public var inverse: HelmertDatumTransform {
-        HelmertDatumTransform(
+    public var inverse: HelmertTransform {
+        HelmertTransform(
             transformX: -transformX,
             transformY: -transformY,
             transformZ: -transformZ,
@@ -30,9 +30,9 @@ extension HelmertDatumTransform {
 }
 
 /// https://en.wikipedia.org/wiki/Helmert_transformation#Standard_parameters
-extension HelmertDatumTransform {
+extension HelmertTransform {
 
-    fileprivate static let identity = HelmertDatumTransform(
+    fileprivate static let identity = HelmertTransform(
             transformX: 0,
             transformY: 0,
             transformZ: 0,
@@ -42,7 +42,7 @@ extension HelmertDatumTransform {
             scale: 1,
             accuracy: 0)
 
-    fileprivate static let wgs84osgb36 = HelmertDatumTransform(
+    fileprivate static let wgs84osgb36 = HelmertTransform(
             transformX: -446.448,
             transformY: 125.157,
             transformZ: -542.060,
@@ -53,7 +53,7 @@ extension HelmertDatumTransform {
             accuracy: 5) // According to the OS
 }
 
-extension HelmertDatumTransform {
+extension HelmertTransform {
 
     public init(from: Datum, to: Datum) {
 
@@ -63,8 +63,8 @@ extension HelmertDatumTransform {
         case (.wgs84, .wgs84): self = .identity
         case (.osgb36, .osgb36): self = .identity
 
-        case (.wgs84, .osgb36): self = HelmertDatumTransform.wgs84osgb36
-        case (.osgb36, .wgs84): self = HelmertDatumTransform.wgs84osgb36.inverse
+        case (.wgs84, .osgb36): self = HelmertTransform.wgs84osgb36
+        case (.osgb36, .wgs84): self = HelmertTransform.wgs84osgb36.inverse
         }
     }
 }
