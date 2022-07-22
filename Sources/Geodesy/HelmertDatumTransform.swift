@@ -17,7 +17,7 @@ extension HelmertDatumTransform {
 
     /// Get the inverse of this transform.
     public var inverse: HelmertDatumTransform {
-        return HelmertDatumTransform(
+        HelmertDatumTransform(
             transformX: -transformX,
             transformY: -transformY,
             transformZ: -transformZ,
