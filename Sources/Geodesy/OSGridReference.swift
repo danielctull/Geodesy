@@ -16,13 +16,13 @@ extension OSGridReference {
 
         // If the coordinate is not in the OSGB36 system,
         // let's try to convert it.
-        if coordinate.system != .osgb36 {
+        if coordinate.datum != .osgb36 {
             coordinate = coordinate.convert(to: .osgb36)
         }
 
         // Do a sanity check here to make sure the
         // coordinate is now in the OSGB36 system.
-        guard coordinate.system == .osgb36 else { return nil }
+        guard coordinate.datum == .osgb36 else { return nil }
 
         accuracy = Int(ceil(coordinate.accuracy))
 
@@ -297,6 +297,6 @@ extension OSGridReference {
         return Coordinate(latitude: .radians(lat),
                           longitude: .radians(lon),
                           accuracy: 5,
-                          system: .osgb36)
+                          datum: .osgb36)
     }
 }

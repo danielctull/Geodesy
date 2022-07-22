@@ -5,7 +5,7 @@ import XCTest
 final class OSGridReferenceTests: XCTestCase {
 
     func testInitCoordinateOSGB36() {
-        let coordinate = Coordinate(latitude: 52.657568, longitude: 1.717908, system: .osgb36)
+        let coordinate = Coordinate(latitude: 52.657568, longitude: 1.717908, datum: .osgb36)
         let reference = OSGridReference(coordinate: coordinate)
         XCTAssertEqual(reference?.easting, 651408)
         XCTAssertEqual(reference?.northing, 313176)
@@ -13,7 +13,7 @@ final class OSGridReferenceTests: XCTestCase {
     }
 
     func testInitCoordinateWGS84() {
-        let coordinate = Coordinate(latitude: 52.657968, longitude: 1.7160229, system: .wgs84)
+        let coordinate = Coordinate(latitude: 52.657968, longitude: 1.7160229, datum: .wgs84)
         let reference = OSGridReference(coordinate: coordinate)
         XCTAssertEqual(reference?.accuracy, 5)
         AssertEqual(reference?.easting, 651408, accuracy: reference?.accuracy)
