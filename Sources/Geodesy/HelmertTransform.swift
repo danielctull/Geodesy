@@ -1,9 +1,9 @@
 
 /// Transforms to apply to coordinates.
 public struct HelmertTransform {
-    public let transformX: Double
-    public let transformY: Double
-    public let transformZ: Double
+    public let translateX: Double
+    public let translateY: Double
+    public let translateZ: Double
     public let rotateX: Angle
     public let rotateY: Angle
     public let rotateZ: Angle
@@ -18,9 +18,9 @@ extension HelmertTransform {
     /// Get the inverse of this transform.
     public var inverse: HelmertTransform {
         HelmertTransform(
-            transformX: -transformX,
-            transformY: -transformY,
-            transformZ: -transformZ,
+            translateX: -translateX,
+            translateY: -translateY,
+            translateZ: -translateZ,
             rotateX: -rotateX,
             rotateY: -rotateY,
             rotateZ: -rotateZ,
@@ -33,9 +33,9 @@ extension HelmertTransform {
 extension HelmertTransform {
 
     fileprivate static let identity = HelmertTransform(
-            transformX: 0,
-            transformY: 0,
-            transformZ: 0,
+            translateX: 0,
+            translateY: 0,
+            translateZ: 0,
             rotateX: .arcseconds(0),
             rotateY: .arcseconds(0),
             rotateZ: .arcseconds(0),
@@ -43,9 +43,9 @@ extension HelmertTransform {
             accuracy: 0)
 
     fileprivate static let wgs84osgb36 = HelmertTransform(
-            transformX: -446.448,
-            transformY: 125.157,
-            transformZ: -542.060,
+            translateX: -446.448,
+            translateY: 125.157,
+            translateZ: -542.060,
             rotateX: .arcseconds(-0.1502),
             rotateY: .arcseconds(-0.2470),
             rotateZ: .arcseconds(-0.8421),

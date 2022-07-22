@@ -45,9 +45,9 @@ extension Coordinate {
 
         // -- 2: apply helmert transform using appropriate params
 
-        let tx = datumTransform.transformX
-        let ty = datumTransform.transformY
-        let tz = datumTransform.transformZ
+        let tx = datumTransform.translateX
+        let ty = datumTransform.translateY
+        let tz = datumTransform.translateZ
 
         // normalise seconds to radians
         let rx = datumTransform.rotateX.radians
