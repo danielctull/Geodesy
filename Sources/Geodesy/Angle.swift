@@ -13,4 +13,8 @@ public struct Angle {
     public init(degrees: Double) {
         self.radians = degrees / 180 * .pi
     }
+
+    public init(arcseconds: Double) {
+        self.init(degrees: arcseconds / 3600)
+    }
 }

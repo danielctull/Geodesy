@@ -4,9 +4,9 @@ public struct HelmertDatumTransform {
     public let transformX: Double
     public let transformY: Double
     public let transformZ: Double
-    public let rotateX: Double
-    public let rotateY: Double
-    public let rotateZ: Double
+    public let rotateX: Angle
+    public let rotateY: Angle
+    public let rotateZ: Angle
     public let scale: Double
 
     /// The accuracy of a conversion performed
@@ -21,9 +21,9 @@ extension HelmertDatumTransform {
             transformX: -transformX,
             transformY: -transformY,
             transformZ: -transformZ,
-            rotateX: -rotateX,
-            rotateY: -rotateY,
-            rotateZ: -rotateZ,
+            rotateX: Angle(radians: -1 * rotateX.radians),
+            rotateY: Angle(radians: -1 * rotateY.radians),
+            rotateZ: Angle(radians: -1 * rotateZ.radians),
             scale: -scale,
             accuracy: accuracy)
     }
@@ -36,9 +36,9 @@ extension HelmertDatumTransform {
             transformX: 0,
             transformY: 0,
             transformZ: 0,
-            rotateX: 0,
-            rotateY: 0,
-            rotateZ: 0,
+            rotateX: Angle(arcseconds: 0),
+            rotateY: Angle(arcseconds: 0),
+            rotateZ: Angle(arcseconds: 0),
             scale: 1,
             accuracy: 0)
 
@@ -46,9 +46,9 @@ extension HelmertDatumTransform {
             transformX: -446.448,
             transformY: 125.157,
             transformZ: -542.060,
-            rotateX: -0.1502,
-            rotateY: -0.2470,
-            rotateZ: -0.8421,
+            rotateX: Angle(arcseconds: -0.1502),
+            rotateY: Angle(arcseconds: -0.2470),
+            rotateZ: Angle(arcseconds: -0.8421),
             scale: 20.4894,
             accuracy: 5) // According to the OS
 }

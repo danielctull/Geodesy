@@ -50,9 +50,9 @@ extension Coordinate {
         let tz = datumTransform.transformZ
 
         // normalise seconds to radians
-        let rx = Angle(degrees: datumTransform.rotateX / 3600).radians
-        let ry = Angle(degrees: datumTransform.rotateY / 3600).radians
-        let rz = Angle(degrees: datumTransform.rotateZ / 3600).radians
+        let rx = datumTransform.rotateX.radians
+        let ry = datumTransform.rotateY.radians
+        let rz = datumTransform.rotateZ.radians
 
         // normalise ppm to (s+1)
         let s1 = datumTransform.scale / 1e6 + 1
