@@ -20,7 +20,7 @@ extension Coordinate {
 
     public func convert(to newSystem: CoordinateSystem) -> Coordinate {
 
-        let datumTransform = HelmertTransform(from: system.datum, to: newSystem.datum)
+        let transform = HelmertTransform(from: system.datum, to: newSystem.datum)
 
         // -- 1: convert polar to cartesian coordinates (using ellipse 1)
 
@@ -45,17 +45,17 @@ extension Coordinate {
 
         // -- 2: apply helmert transform using appropriate params
 
-        let tx = datumTransform.translateX
-        let ty = datumTransform.translateY
-        let tz = datumTransform.translateZ
+        let tx = transform.translateX
+        let ty = transform.translateY
+        let tz = transform.translateZ
 
         // normalise seconds to radians
-        let rx = datumTransform.rotateX.radians
-        let ry = datumTransform.rotateY.radians
-        let rz = datumTransform.rotateZ.radians
+        let rx = transform.rotateX.radians
+        let ry = transform.rotateY.radians
+        let rz = transform.rotateZ.radians
 
         // normalise ppm to (s+1)
-        let s1 = datumTransform.scale / 1e6 + 1
+        let s1 = transform.scale / 1e6 + 1
 
         // apply transform
         let x2 = tx + (x1 * s1) - (y1 * rz) + (z1 * ry)
@@ -85,7 +85,7 @@ extension Coordinate {
         return Coordinate(
             latitude: .radians(phi),
             longitude: .radians(lambda),
-            accuracy: accuracy + datumTransform.accuracy,
+            accuracy: accuracy + transform.accuracy,
             system: newSystem)
     }
 }
