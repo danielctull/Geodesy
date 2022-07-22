@@ -45,22 +45,7 @@ extension Coordinate {
 
         // -- 2: apply helmert transform using appropriate params
 
-        let tx = transform.translateX
-        let ty = transform.translateY
-        let tz = transform.translateZ
-
-        // normalise seconds to radians
-        let rx = transform.rotateX.radians
-        let ry = transform.rotateY.radians
-        let rz = transform.rotateZ.radians
-
-        // normalise ppm to (s+1)
-        let s1 = transform.scale / 1e6 + 1
-
-        // apply transform
-        let x2 = tx + (x1 * s1) - (y1 * rz) + (z1 * ry)
-        let y2 = ty + (x1 * rz) + (y1 * s1) - (z1 * rx)
-        let z2 = tz - (x1 * ry) + (y1 * rx) + (z1 * s1)
+        let position = CartesianCoordinate3D(x: x1, y: y1, z: z1).apply(transform)
 
         // -- 3: convert cartesian to polar coordinates (using ellipse 2)
 
@@ -69,17 +54,17 @@ extension Coordinate {
         let precision = 4 / a;  // results accurate to around 4 metres
 
         eSq = (a * a - b * b) / (a * a)
-        let p = sqrt(x2 * x2 + y2 * y2)
-        var phi = atan2(z2, p * (1 - eSq))
+        let p = sqrt(position.x * position.x + position.y * position.y)
+        var phi = atan2(position.z, p * (1 - eSq))
         var phiP = 2 * Double.pi
 
         while fabs(phi - phiP) > precision {
             nu = a / sqrt(1 - eSq * sin(phi) * sin(phi))
             phiP = phi
-            phi = atan2(z2 + eSq * nu * sin(phi), p)
+            phi = atan2(position.z + eSq * nu * sin(phi), p)
         }
 
-        let lambda = atan2(y2, x2)
+        let lambda = atan2(position.y, position.x)
         H = p / cos(phi) - nu
 
         return Coordinate(
