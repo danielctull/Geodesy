@@ -6,11 +6,11 @@ public struct CoordinateSystem: Equatable {
 
 extension CoordinateSystem {
 
-    public static var wgs84: CoordinateSystem {
-        CoordinateSystem(datum: .wgs84, ellipsoid: .wgs84)
-    }
+    public static let wgs84 = CoordinateSystem(
+        datum: .wgs84,
+        ellipsoid: .wgs84)
 
-    public static var osgb36: CoordinateSystem {
-        CoordinateSystem(datum: .osgb36, ellipsoid: .airy1830)
-    }
+    public static let osgb36 = CoordinateSystem(
+        datum: .osgb36,
+        ellipsoid: .airy1830)
 }

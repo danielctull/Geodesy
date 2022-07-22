@@ -32,8 +32,7 @@ extension HelmertDatumTransform {
 /// https://en.wikipedia.org/wiki/Helmert_transformation#Standard_parameters
 extension HelmertDatumTransform {
 
-    fileprivate static var identity: HelmertDatumTransform {
-        HelmertDatumTransform(
+    fileprivate static let identity = HelmertDatumTransform(
             transformX: 0,
             transformY: 0,
             transformZ: 0,
@@ -42,10 +41,8 @@ extension HelmertDatumTransform {
             rotateZ: 0,
             scale: 1,
             accuracy: 0)
-    }
 
-    fileprivate static var wgs84osgb36: HelmertDatumTransform {
-        HelmertDatumTransform(
+    fileprivate static let wgs84osgb36 = HelmertDatumTransform(
             transformX: -446.448,
             transformY: 125.157,
             transformZ: -542.060,
@@ -54,11 +51,6 @@ extension HelmertDatumTransform {
             rotateZ: -0.8421,
             scale: 20.4894,
             accuracy: 5) // According to the OS
-    }
-
-    fileprivate static var osgb36wgs84: HelmertDatumTransform {
-        wgs84osgb36.inverse
-    }
 }
 
 extension HelmertDatumTransform {
@@ -72,7 +64,7 @@ extension HelmertDatumTransform {
         case (.osgb36, .osgb36): self = .identity
 
         case (.wgs84, .osgb36): self = .wgs84osgb36
-        case (.osgb36, .wgs84): self = .osgb36wgs84
+        case (.osgb36, .wgs84): self = .wgs84osgb36.inverse
         }
     }
 }
