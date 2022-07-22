@@ -63,8 +63,8 @@ extension HelmertDatumTransform {
         case (.wgs84, .wgs84): self = .identity
         case (.osgb36, .osgb36): self = .identity
 
-        case (.wgs84, .osgb36): self = .wgs84osgb36
-        case (.osgb36, .wgs84): self = .wgs84osgb36.inverse
+        case (.wgs84, .osgb36): self = HelmertDatumTransform.wgs84osgb36
+        case (.osgb36, .wgs84): self = HelmertDatumTransform.wgs84osgb36.inverse
         }
     }
 }
