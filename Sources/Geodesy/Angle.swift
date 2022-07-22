@@ -6,15 +6,22 @@ public struct Angle {
     public let radians: Double
     public var degrees: Double { radians * 180 / .pi }
 
-    public init(radians: Double) {
+    private init(radians: Double) {
         self.radians = radians
     }
+}
 
-    public init(degrees: Double) {
-        self.radians = degrees / 180 * .pi
+extension Angle {
+
+    public static func radians(_ radians: Double) -> Angle {
+        Angle(radians: radians)
     }
 
-    public init(arcseconds: Double) {
-        self.init(degrees: arcseconds / 3600)
+    public static func degrees(_ degrees: Double) -> Angle {
+        .radians(degrees / 180 * .pi)
+    }
+
+    public static func arcseconds(_ arcseconds: Double) -> Angle {
+        .degrees(arcseconds / 3600)
     }
 }

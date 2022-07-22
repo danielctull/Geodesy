@@ -8,8 +8,8 @@ extension Coordinate {
          accuracy: Double = 0,
          system: CoordinateSystem = .wgs84
     ) {
-        self.init(latitude: Angle(degrees: latitude),
-                  longitude: Angle(degrees: longitude),
+        self.init(latitude: .degrees(latitude),
+                  longitude: .degrees(longitude),
                   accuracy: accuracy,
                   system: system)
     }

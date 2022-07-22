@@ -37,8 +37,8 @@ extension OSGridReference {
         let F0 = 0.9996012717
 
         // National Grid true origin is 49ºN,2ºW
-        let lat0 = Angle(degrees: 49).radians
-        let lon0 = Angle(degrees: -2).radians
+        let lat0 = Angle.degrees(49).radians
+        let lon0 = Angle.degrees(-2).radians
 
         // northing & easting of true origin, metres
         let N0: Double = -100000
@@ -223,8 +223,8 @@ extension OSGridReference {
         let F0 = 0.9996012717
 
         // National Grid true origin is 49ºN,2ºW
-        let lat0 = Angle(degrees: 49).radians
-        let lon0 = Angle(degrees: -2).radians
+        let lat0 = Angle.degrees(49).radians
+        let lon0 = Angle.degrees(-2).radians
 
         // northing & easting of true origin, metres
         let N0: Double = -100000
@@ -294,10 +294,8 @@ extension OSGridReference {
         lat -= VII * dE2 + VIII * dE4 - IX * dE6
         let lon = lon0 + X * dE - XI * dE3 + XII * dE5 - XIIA * dE7
 
-        let latitude = Angle(radians: lat)
-        let longitude = Angle(radians: lon)
-        return Coordinate(latitude: latitude,
-                          longitude: longitude,
+        return Coordinate(latitude: .radians(lat),
+                          longitude: .radians(lon),
                           accuracy: 5,
                           system: .osgb36)
     }

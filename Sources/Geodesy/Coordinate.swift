@@ -82,12 +82,9 @@ extension Coordinate {
         let lambda = atan2(y2, x2)
         H = p / cos(phi) - nu
 
-        let newLatitude = Angle(radians: phi)
-        let newLongitude = Angle(radians: lambda)
-
         return Coordinate(
-            latitude: newLatitude,
-            longitude: newLongitude,
+            latitude: .radians(phi),
+            longitude: .radians(lambda),
             accuracy: accuracy + datumTransform.accuracy,
             system: newSystem)
     }

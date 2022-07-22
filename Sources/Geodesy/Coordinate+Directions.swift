@@ -20,7 +20,7 @@ extension Coordinate {
         let dy = sin(dLongitude) * cos(toLatitude)
         let dx = cos(fromLatitude) * sin(toLatitude) - sin(fromLatitude) * cos(toLatitude) * cos(dLongitude)
         let angle = atan2(dy, dx)
-        return Angle(radians: angle)
+        return .radians(angle)
     }
 
     public func distance(to coordinate: Coordinate) -> Double {
