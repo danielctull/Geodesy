@@ -20,20 +20,20 @@ extension Coordinate {
 
     public func convert(to newSystem: CoordinateSystem) -> Coordinate {
 
-        let transform = HelmertTransform(from: system.datum, to: newSystem.datum)
-
         // -- 1: convert polar to cartesian coordinates (using ellipse 1)
-        // -- 2: apply helmert transform using appropriate params
-        // -- 3: convert cartesian to polar coordinates (using ellipse 2)
+        // -- 2: apply helmert transform to WGS84
+        // -- 3: apply new system's helmert transform from WGS84
+        // -- 4: convert cartesian to polar coordinates (using ellipse 2)
 
         let p = cartesianCoordinates(using: system.ellipsoid)
-            .apply(transform)
+            .apply(system.datum.toWGS84)
+            .apply(newSystem.datum.fromWGS84)
             .polarCoordinates(using: newSystem.ellipsoid)
 
         return Coordinate(
             latitude: p.0,
             longitude: p.1,
-            accuracy: accuracy + transform.accuracy,
+            accuracy: accuracy + system.datum.toWGS84.accuracy + newSystem.datum.fromWGS84.accuracy,
             system: newSystem)
     }
 }

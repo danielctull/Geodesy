@@ -1,7 +1,7 @@
 
 public struct CoordinateSystem: Equatable {
-    public let datum: Datum
-    public let ellipsoid: Ellipsoid
+    let datum: Datum
+    let ellipsoid: Ellipsoid
 }
 
 extension CoordinateSystem {

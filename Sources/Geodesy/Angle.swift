@@ -1,7 +1,7 @@
 
 import Foundation
 
-public struct Angle {
+public struct Angle: Equatable {
 
     public let radians: Double
     public var degrees: Double { radians * 180 / .pi }
