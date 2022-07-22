@@ -5,6 +5,7 @@ public struct Angle {
 
     public let radians: Double
     public var degrees: Double { radians * 180 / .pi }
+    public var arcseconds: Double { degrees * 3600 }
 
     private init(radians: Double) {
         self.radians = radians
